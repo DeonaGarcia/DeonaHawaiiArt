@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -173,5 +174,41 @@ All colors MUST be HSL.
   /* Gallery hover effects */
   .gallery-item {
     @apply transition-all duration-300 hover:scale-105 hover:shadow-elegant;
+  }
+
+  /* Gold picture frame effect */
+  .gold-frame {
+    position: relative;
+    padding: 16px;
+    background: linear-gradient(45deg, 
+      #d4af37 0%, 
+      #ffd700 25%, 
+      #ffed4e 50%, 
+      #ffd700 75%, 
+      #d4af37 100%);
+    border-radius: 8px;
+    box-shadow: 
+      0 0 0 3px #b8860b,
+      0 0 0 6px #daa520,
+      0 4px 12px rgba(212, 175, 55, 0.3),
+      inset 0 0 20px rgba(255, 215, 0, 0.2);
+  }
+
+  .gold-frame::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    pointer-events: none;
+  }
+
+  .gold-frame img {
+    border-radius: 4px;
+    position: relative;
+    z-index: 1;
   }
 }

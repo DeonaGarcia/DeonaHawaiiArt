@@ -6,10 +6,50 @@ import Navigation from "@/components/Navigation";
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  // Placeholder artwork data - to be replaced with actual artwork uploads
+  // Updated artwork data with your actual paintings
   const artworks = [
     {
       id: 1,
+      title: "Volcanic Paradise",
+      category: "Landscapes",
+      image: "/lovable-uploads/95a751d3-8c53-4ca8-8bff-4e6bb3e00c60.png",
+      description: "A dramatic volcanic landscape with turquoise waters and lush tropical scenery",
+      year: "2024"
+    },
+    {
+      id: 2,
+      title: "Dancing Dolphins",
+      category: "Marine Life",
+      image: "/lovable-uploads/8115e395-30f3-40d7-a2aa-9f3ff73fb191.png",
+      description: "Playful dolphins swimming beneath golden sunset reflections",
+      year: "2024"
+    },
+    {
+      id: 3,
+      title: "Ocean Sunset",
+      category: "Seascapes",
+      image: "/lovable-uploads/829d8a8f-ccac-4bd0-ba55-4a11116589b6.png",
+      description: "Vibrant sunset over rolling ocean waves with warm golden hues",
+      year: "2024"
+    },
+    {
+      id: 4,
+      title: "Mystical Whale",
+      category: "Marine Life",
+      image: "/lovable-uploads/fae00e6a-e4bb-40fb-9063-5995b79fdd1e.png",
+      description: "An abstract interpretation of a whale surrounded by colorful marine patterns",
+      year: "2024"
+    },
+    {
+      id: 5,
+      title: "Sea Turtle's Journey",
+      category: "Marine Life",
+      image: "/lovable-uploads/0429c256-760f-4e42-8811-403fbd9ac2b6.png",
+      description: "A peaceful sea turtle swimming through crystal clear Hawaiian waters",
+      year: "2024"
+    },
+    {
+      id: 6,
       title: "Golden Hour Palms",
       category: "Landscapes",
       image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1000&auto=format&fit=crop",
@@ -58,7 +98,7 @@ const Gallery = () => {
     }
   ];
 
-  const categories = ["All", "Landscapes", "Seascapes", "Florals"];
+  const categories = ["All", "Landscapes", "Seascapes", "Marine Life"];
 
   const filteredArtworks = selectedCategory === "All" 
     ? artworks 
@@ -103,7 +143,7 @@ const Gallery = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredArtworks.map((artwork) => (
               <Card key={artwork.id} className="group gallery-item overflow-hidden shadow-tropical">
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden gold-frame">
                   <img
                     src={artwork.image}
                     alt={artwork.title}
