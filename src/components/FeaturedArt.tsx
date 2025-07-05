@@ -10,12 +10,6 @@ const FeaturedArt = () => {
       title: "Dancing Dolphins",
       image: "/lovable-uploads/8115e395-30f3-40d7-a2aa-9f3ff73fb191.png",
       description: "Playful dolphins swimming beneath golden sunset reflections"
-    },
-    {
-      id: 3,  
-      title: "Volcanic Paradise",
-      image: "/lovable-uploads/95a751d3-8c53-4ca8-8bff-4e6bb3e00c60.png",
-      description: "A dramatic volcanic landscape with turquoise waters and lush tropical scenery"
     }
   ];
 
