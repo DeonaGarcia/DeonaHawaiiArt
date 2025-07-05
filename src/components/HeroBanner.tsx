@@ -9,7 +9,7 @@ const HeroBanner = () => {
     }} />
       
       {/* Light overlay for text readability */}
-      <div className="absolute inset-0 bg-gradient-hero opacity-30" />
+      <div className="absolute inset-0 bg-black/20" />
       
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
