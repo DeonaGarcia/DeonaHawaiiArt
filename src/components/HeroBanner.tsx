@@ -1,24 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroBannerImage from "@/assets/hero-banner.jpg";
-
 const HeroBanner = () => {
-  return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+  return <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background with your artwork */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('/lovable-uploads/d67e96a6-3f5b-4a22-83a9-b3890065deb2.png')`
-        }}
-      />
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+      backgroundImage: `url('/lovable-uploads/d67e96a6-3f5b-4a22-83a9-b3890065deb2.png')`
+    }} />
       
       {/* Light overlay for text readability */}
       <div className="absolute inset-0 bg-gradient-hero opacity-30" />
       
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-5xl md:text-7xl font-bold font-montserrat hero-text mb-6">
+        <h1 className="text-5xl font-montserrat hero-text mb-6 font-normal md:text-7xl">
           Deona Hawaii Art
         </h1>
         
@@ -27,21 +22,11 @@ const HeroBanner = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
-          <Button 
-            asChild 
-            variant="cyan"
-            size="lg"
-            className="font-montserrat font-semibold px-10 py-4 text-lg shadow-gold rounded-xl"
-          >
+          <Button asChild variant="cyan" size="lg" className="font-montserrat font-semibold px-10 py-4 text-lg shadow-gold rounded-xl">
             <Link to="/gallery">View Gallery</Link>
           </Button>
           
-          <Button 
-            asChild 
-            variant="cyan"
-            size="lg"
-            className="font-montserrat font-semibold px-10 py-4 text-lg shadow-gold rounded-xl"
-          >
+          <Button asChild variant="cyan" size="lg" className="font-montserrat font-semibold px-10 py-4 text-lg shadow-gold rounded-xl">
             <Link to="/about">About the Artist</Link>
           </Button>
         </div>
@@ -53,8 +38,6 @@ const HeroBanner = () => {
           <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroBanner;
