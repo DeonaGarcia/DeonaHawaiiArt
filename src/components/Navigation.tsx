@@ -23,7 +23,12 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-3">
+            <img 
+              src="/lovable-uploads/aa35398d-6838-47b5-8cbe-8893ed57559d.png" 
+              alt="Deona Hawaii Art Logo" 
+              className="h-12 w-12 object-contain"
+            />
             <h1 className="text-2xl font-bold font-montserrat text-primary">
               Deona Hawaii Art
             </h1>
