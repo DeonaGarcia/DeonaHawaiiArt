@@ -50,7 +50,7 @@ const Gallery = () => {
     },
     {
       id: 6,
-      title: "Paradise Beach",
+      title: "Kahalu'u Beach Park",
       category: "Seascapes",
       image: "/lovable-uploads/074df5df-41ce-4bb6-92c2-ac788500be8a.png",
       description: "A pristine Hawaiian beach with crystal clear turquoise waters and golden sand",
