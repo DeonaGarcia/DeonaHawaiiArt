@@ -51,6 +51,10 @@ export default {
 					DEFAULT: 'hsl(var(--nature))',
 					foreground: 'hsl(var(--nature-foreground))'
 				},
+				cyan: {
+					DEFAULT: 'hsl(var(--cyan))',
+					foreground: 'hsl(var(--cyan-foreground))'
+				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
 					foreground: 'hsl(var(--popover-foreground))'
