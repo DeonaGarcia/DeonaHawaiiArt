@@ -21,12 +21,12 @@ const HeroBanner = () => {
           Original art inspired by the beauty of the islands
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-12 justify-center items-center">
-          <Button asChild variant="cyan" size="default" className="font-montserrat font-semibold px-8 py-2 text-base shadow-gold rounded-xl">
+        <div className="flex flex-col sm:flex-row gap-6 sm:gap-12 justify-center items-center">
+          <Button asChild variant="cyan" size="mobile" className="font-montserrat font-semibold shadow-gold w-full sm:w-auto max-w-xs">
             <Link to="/gallery" className="mx-0">View Gallery</Link>
           </Button>
           
-          <Button asChild variant="cyan" size="default" className="font-montserrat font-semibold px-8 py-2 text-base shadow-gold rounded-xl">
+          <Button asChild variant="cyan" size="mobile" className="font-montserrat font-semibold shadow-gold w-full sm:w-auto max-w-xs">
             <Link to="/about">About the Artist</Link>
           </Button>
         </div>

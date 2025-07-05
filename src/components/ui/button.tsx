@@ -21,10 +21,11 @@ const buttonVariants = cva(
         cyan: "bg-cyan text-white hover:bg-cyan/80 rounded-xl shadow-lg",
       },
       size: {
-        default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
-        lg: "h-11 rounded-md px-8",
-        icon: "h-10 w-10",
+        default: "h-10 px-4 py-2 min-h-[44px]", // Improved touch target
+        sm: "h-9 rounded-md px-3 min-h-[36px]",
+        lg: "h-12 rounded-md px-8 min-h-[48px]", // Enhanced for mobile
+        icon: "h-10 w-10 min-h-[44px] min-w-[44px]", // Better touch target
+        mobile: "h-12 px-6 py-3 text-base min-h-[48px] rounded-xl", // Mobile-optimized
       },
     },
     defaultVariants: {

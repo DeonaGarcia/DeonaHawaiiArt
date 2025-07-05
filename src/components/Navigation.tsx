@@ -55,9 +55,9 @@ const Navigation = () => {
           <div className="md:hidden">
             <Button
               variant="ghost"
-              size="sm"
+              size="icon"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2"
+              className="p-2 min-h-[44px] min-w-[44px]"
             >
               <div className="w-6 h-6 flex flex-col justify-center items-center">
                 <span
@@ -83,15 +83,15 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-background border-t border-border">
+            <div className="px-2 pt-2 pb-3 space-y-2 sm:px-3 bg-background border-t border-border">
               {navItems.map((item) => (
-                <Link
+                  <Link
                   key={item.name}
                   to={item.path}
-                  className={`block px-3 py-2 text-base font-montserrat font-medium transition-colors hover:text-secondary ${
+                  className={`block px-4 py-3 text-base font-montserrat font-medium transition-colors hover:text-secondary min-h-[44px] flex items-center rounded-md ${
                     isActive(item.path)
-                      ? "text-secondary"
-                      : "text-foreground"
+                      ? "text-secondary bg-secondary/10"
+                      : "text-foreground hover:bg-muted"
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
