@@ -1,0 +1,174 @@
+import { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import Navigation from "@/components/Navigation";
+
+const Gallery = () => {
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
+  // Placeholder artwork data - to be replaced with actual artwork uploads
+  const artworks = [
+    {
+      id: 1,
+      title: "Golden Hour Palms",
+      category: "Landscapes",
+      image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1000&auto=format&fit=crop",
+      description: "Palm trees silhouetted against a golden Hawaiian sunset",
+      year: "2024"
+    },
+    {
+      id: 2,
+      title: "Ocean Breeze",
+      category: "Seascapes",
+      image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=1000&auto=format&fit=crop",
+      description: "Waves gently lapping the shores of a secluded beach",
+      year: "2024"
+    },
+    {
+      id: 3,
+      title: "Mountain Mist",
+      category: "Landscapes",
+      image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?q=80&w=1000&auto=format&fit=crop",
+      description: "Morning mist rising from lush Hawaiian mountains",
+      year: "2023"
+    },
+    {
+      id: 4,
+      title: "Tropical Blooms",
+      category: "Florals",
+      image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=80&w=1000&auto=format&fit=crop",
+      description: "Vibrant tropical flowers in full bloom",
+      year: "2024"
+    },
+    {
+      id: 5,
+      title: "Forest Light",
+      category: "Landscapes",
+      image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?q=80&w=1000&auto=format&fit=crop",
+      description: "Sunlight filtering through dense tropical foliage",
+      year: "2023"
+    },
+    {
+      id: 6,
+      title: "Sunset Reflection",
+      category: "Seascapes", 
+      image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?q=80&w=1000&auto=format&fit=crop",
+      description: "Perfect reflection of sunset colors on calm waters",
+      year: "2024"
+    }
+  ];
+
+  const categories = ["All", "Landscapes", "Seascapes", "Florals"];
+
+  const filteredArtworks = selectedCategory === "All" 
+    ? artworks 
+    : artworks.filter(artwork => artwork.category === selectedCategory);
+
+  return (
+    <div className="min-h-screen bg-background">
+      <Navigation />
+      
+      <main className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold font-montserrat text-primary mb-4">
+              Art Gallery
+            </h1>
+            <p className="text-lg text-muted-foreground font-montserrat max-w-2xl mx-auto">
+              Explore my collection of original paintings inspired by the natural beauty of Hawaii. 
+              Each piece captures a unique moment in island paradise.
+            </p>
+          </div>
+
+          {/* Category Filter */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {categories.map((category) => (
+              <Button
+                key={category}
+                variant={selectedCategory === category ? "default" : "outline"}
+                onClick={() => setSelectedCategory(category)}
+                className={`font-montserrat font-medium ${
+                  selectedCategory === category
+                    ? "bg-primary hover:bg-primary/90 text-primary-foreground"
+                    : "hover:bg-secondary hover:text-secondary-foreground"
+                }`}
+              >
+                {category}
+              </Button>
+            ))}
+          </div>
+
+          {/* Gallery Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredArtworks.map((artwork) => (
+              <Card key={artwork.id} className="group gallery-item overflow-hidden shadow-tropical">
+                <div className="relative overflow-hidden">
+                  <img
+                    src={artwork.image}
+                    alt={artwork.title}
+                    className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-hero opacity-0 group-hover:opacity-30 transition-opacity duration-300" />
+                  
+                  {/* Overlay with info */}
+                  <div className="absolute inset-0 flex items-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="bg-gradient-to-t from-black/70 to-transparent w-full p-6">
+                      <h3 className="text-xl font-semibold font-montserrat text-white mb-1">
+                        {artwork.title}
+                      </h3>
+                      <p className="text-white/90 font-montserrat text-sm">
+                        {artwork.year} • {artwork.category}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold font-montserrat text-primary mb-2">
+                    {artwork.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground font-montserrat mb-2">
+                    {artwork.category} • {artwork.year}
+                  </p>
+                  <p className="text-muted-foreground font-montserrat text-sm leading-relaxed">
+                    {artwork.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* Empty State */}
+          {filteredArtworks.length === 0 && (
+            <div className="text-center py-16">
+              <p className="text-muted-foreground font-montserrat text-lg">
+                No artworks found in this category.
+              </p>
+            </div>
+          )}
+
+          {/* CTA Section */}
+          <div className="text-center mt-20 py-16 bg-muted rounded-2xl">
+            <h2 className="text-3xl font-bold font-montserrat text-primary mb-4">
+              Interested in a Commission?
+            </h2>
+            <p className="text-muted-foreground font-montserrat mb-8 max-w-2xl mx-auto">
+              I create custom pieces that capture your personal connection to Hawaii. 
+              Let's discuss bringing your vision to life.
+            </p>
+            <Button 
+              asChild 
+              size="lg"
+              className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-montserrat font-semibold px-8 py-3 shadow-gold"
+            >
+              <a href="#contact">Get In Touch</a>
+            </Button>
+          </div>
+        </div>
+      </main>
+    </div>
+  );
+};
+
+export default Gallery;

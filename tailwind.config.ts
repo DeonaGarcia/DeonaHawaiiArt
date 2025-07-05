@@ -18,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'montserrat': ['Montserrat', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -43,6 +46,10 @@ export default {
 				accent: {
 					DEFAULT: 'hsl(var(--accent))',
 					foreground: 'hsl(var(--accent-foreground))'
+				},
+				nature: {
+					DEFAULT: 'hsl(var(--nature))',
+					foreground: 'hsl(var(--nature-foreground))'
 				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
