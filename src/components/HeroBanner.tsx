@@ -7,15 +7,14 @@ const HeroBanner = () => {
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background with your artwork */}
       <div 
-        className="absolute inset-0 bg-gradient-hero bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('/lovable-uploads/d67e96a6-3f5b-4a22-83a9-b3890065deb2.png')`,
-          backgroundBlendMode: 'overlay'
+          backgroundImage: `url('/lovable-uploads/d67e96a6-3f5b-4a22-83a9-b3890065deb2.png')`
         }}
       />
       
-      {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-gradient-hero opacity-80" />
+      {/* Light overlay for text readability */}
+      <div className="absolute inset-0 bg-gradient-hero opacity-30" />
       
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,20 +26,21 @@ const HeroBanner = () => {
           Original art inspired by the beauty of the islands
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
           <Button 
             asChild 
+            variant="cyan"
             size="lg"
-            className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-montserrat font-semibold px-8 py-3 text-lg shadow-gold"
+            className="font-montserrat font-semibold px-10 py-4 text-lg shadow-gold rounded-xl"
           >
             <Link to="/gallery">View Gallery</Link>
           </Button>
           
           <Button 
             asChild 
-            variant="outline" 
+            variant="cyan"
             size="lg"
-            className="border-2 border-white text-white hover:bg-white hover:text-primary font-montserrat font-semibold px-8 py-3 text-lg"
+            className="font-montserrat font-semibold px-10 py-4 text-lg shadow-gold rounded-xl"
           >
             <Link to="/about">About the Artist</Link>
           </Button>

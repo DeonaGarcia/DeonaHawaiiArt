@@ -35,6 +35,10 @@ All colors MUST be HSL.
     --accent: 15 85% 65%;
     --accent-foreground: 43 47% 97%;
 
+    /* Light cyan blue for buttons */
+    --cyan: 185 85% 70%;
+    --cyan-foreground: 193 100% 8%;
+
     /* Tropical nature - Palm green */
     --nature: 140 65% 35%;
     --nature-foreground: 43 47% 97%;
