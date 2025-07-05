@@ -17,7 +17,7 @@ const HeroBanner = () => {
           Deona Hawaii Art
         </h1>
         
-        <p className="text-xl font-montserrat italic hero-text mb-8 font-light md:text-3xl">
+        <p className="font-montserrat italic hero-text mb-8 font-light md:text-3xl text-3xl">
           Original art inspired by the beauty of the islands
         </p>
         
