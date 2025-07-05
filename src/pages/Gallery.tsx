@@ -42,7 +42,7 @@ const Gallery = () => {
     },
     {
       id: 5,
-      title: "Sea Turtle's Journey",
+      title: "Kahalu'u Beach Park",
       category: "Marine Life",
       image: "/lovable-uploads/0429c256-760f-4e42-8811-403fbd9ac2b6.png",
       description: "A peaceful sea turtle swimming through crystal clear Hawaiian waters",
