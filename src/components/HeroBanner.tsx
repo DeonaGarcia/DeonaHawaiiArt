@@ -23,7 +23,7 @@ const HeroBanner = () => {
         
         <div className="flex flex-col sm:flex-row gap-12 justify-center items-center">
           <Button asChild variant="cyan" size="lg" className="font-montserrat font-semibold px-16 py-4 text-lg shadow-gold rounded-xl">
-            <Link to="/gallery">View Gallery</Link>
+            <Link to="/gallery" className="mx-0">View Gallery</Link>
           </Button>
           
           <Button asChild variant="cyan" size="lg" className="font-montserrat font-semibold px-16 py-4 text-lg shadow-gold rounded-xl">
