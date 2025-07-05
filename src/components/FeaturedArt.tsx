@@ -7,21 +7,21 @@ const FeaturedArt = () => {
   const featuredPieces = [
     {
       id: 1,
-      title: "Tropical Sunset",
-      image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1000&auto=format&fit=crop",
-      description: "Vibrant colors of a Hawaiian sunset over pristine waters"
+      title: "Paradise Beach",
+      image: "/lovable-uploads/074df5df-41ce-4bb6-92c2-ac788500be8a.png",
+      description: "A pristine Hawaiian beach with crystal clear turquoise waters and golden sand"
     },
     {
       id: 2,
-      title: "Island Paradise",
-      image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=1000&auto=format&fit=crop",
-      description: "The serene beauty of untouched island landscapes"
+      title: "Dancing Dolphins",
+      image: "/lovable-uploads/8115e395-30f3-40d7-a2aa-9f3ff73fb191.png",
+      description: "Playful dolphins swimming beneath golden sunset reflections"
     },
     {
       id: 3,  
-      title: "Ocean Dreams",
-      image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?q=80&w=1000&auto=format&fit=crop",
-      description: "Capturing the endless horizon where ocean meets sky"
+      title: "Volcanic Paradise",
+      image: "/lovable-uploads/95a751d3-8c53-4ca8-8bff-4e6bb3e00c60.png",
+      description: "A dramatic volcanic landscape with turquoise waters and lush tropical scenery"
     }
   ];
 
@@ -41,7 +41,7 @@ const FeaturedArt = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {featuredPieces.map((piece) => (
             <Card key={piece.id} className="group gallery-item overflow-hidden shadow-tropical">
-              <div className="relative overflow-hidden">
+              <div className="relative overflow-hidden gold-frame">
                 <img
                   src={piece.image}
                   alt={piece.title}

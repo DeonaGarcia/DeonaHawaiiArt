@@ -50,6 +50,14 @@ const Gallery = () => {
     },
     {
       id: 6,
+      title: "Paradise Beach",
+      category: "Seascapes",
+      image: "/lovable-uploads/074df5df-41ce-4bb6-92c2-ac788500be8a.png",
+      description: "A pristine Hawaiian beach with crystal clear turquoise waters and golden sand",
+      year: "2024"
+    },
+    {
+      id: 7,
       title: "Golden Hour Palms",
       category: "Landscapes",
       image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1000&auto=format&fit=crop",
