@@ -6,12 +6,6 @@ const FeaturedArt = () => {
   // Placeholder artwork data - to be replaced with actual artwork
   const featuredPieces = [
     {
-      id: 1,
-      title: "Paradise Beach",
-      image: "/lovable-uploads/074df5df-41ce-4bb6-92c2-ac788500be8a.png",
-      description: "A pristine Hawaiian beach with crystal clear turquoise waters and golden sand"
-    },
-    {
       id: 2,
       title: "Dancing Dolphins",
       image: "/lovable-uploads/8115e395-30f3-40d7-a2aa-9f3ff73fb191.png",
