@@ -8,8 +8,8 @@ const HeroBanner = () => {
       backgroundImage: `url('/lovable-uploads/d67e96a6-3f5b-4a22-83a9-b3890065deb2.png')`
     }} />
       
-      {/* Light overlay for text readability */}
-      <div className="absolute inset-0 bg-black/20" />
+      {/* Minimal overlay for text readability */}
+      <div className="absolute inset-0 bg-black/5" />
       
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
