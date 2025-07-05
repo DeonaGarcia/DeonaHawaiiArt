@@ -12,7 +12,7 @@ const HeroBanner = () => {
       <div className="absolute inset-0 bg-black/5" />
       
       {/* Content */}
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-5xl font-montserrat hero-text mb-6 font-normal md:text-7xl">
           Deona Hawaii Art
         </h1>
