@@ -5,11 +5,11 @@ import heroBannerImage from "@/assets/hero-banner.jpg";
 const HeroBanner = () => {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background with artwork banner */}
+      {/* Background with your artwork */}
       <div 
         className="absolute inset-0 bg-gradient-hero bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('${heroBannerImage}')`,
+          backgroundImage: `url('/lovable-uploads/d67e96a6-3f5b-4a22-83a9-b3890065deb2.png')`,
           backgroundBlendMode: 'overlay'
         }}
       />
@@ -24,7 +24,7 @@ const HeroBanner = () => {
         </h1>
         
         <p className="text-xl md:text-2xl font-montserrat italic hero-text mb-8 font-light">
-          Original art inspired by the islands
+          Original art inspired by the beauty of the islands
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
