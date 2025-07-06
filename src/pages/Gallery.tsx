@@ -151,7 +151,7 @@ const Gallery = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredArtworks.map((artwork) => (
               <Card key={artwork.id} className="group gallery-item overflow-hidden shadow-tropical">
-                <div className="relative overflow-hidden gold-frame">
+                <div className="relative overflow-hidden">
                   <img
                     src={artwork.image}
                     alt={artwork.title}

@@ -29,7 +29,7 @@ const FeaturedArt = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {featuredPieces.map((piece) => (
             <Card key={piece.id} className="group gallery-item overflow-hidden shadow-tropical">
-              <div className="relative overflow-hidden gold-frame">
+              <div className="relative overflow-hidden">
                 <img
                   src={piece.image}
                   alt={piece.title}
