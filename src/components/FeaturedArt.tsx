@@ -1,20 +1,15 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-
 const FeaturedArt = () => {
   // Placeholder artwork data - to be replaced with actual artwork
-  const featuredPieces = [
-    {
-      id: 2,
-      title: "Dancing Dolphins",
-      image: "/lovable-uploads/8115e395-30f3-40d7-a2aa-9f3ff73fb191.png",
-      description: "Playful dolphins swimming beneath golden sunset reflections"
-    }
-  ];
-
-  return (
-    <section className="py-20 bg-background">
+  const featuredPieces = [{
+    id: 2,
+    title: "Dancing Dolphins",
+    image: "/lovable-uploads/8115e395-30f3-40d7-a2aa-9f3ff73fb191.png",
+    description: "Playful dolphins swimming beneath golden sunset reflections"
+  }];
+  return <section className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold font-montserrat text-primary mb-4">
@@ -27,17 +22,12 @@ const FeaturedArt = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {featuredPieces.map((piece) => (
-            <Card key={piece.id} className="group gallery-item overflow-hidden shadow-tropical">
+          {featuredPieces.map(piece => <Card key={piece.id} className="group gallery-item overflow-hidden shadow-tropical">
               <div className="relative overflow-hidden">
-                <img
-                  src={piece.image}
-                  alt={piece.title}
-                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
-                />
+                <img src={piece.image} alt={piece.title} className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-hero opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
               </div>
-              <CardContent className="p-6">
+              <CardContent className="p-6 bg-slate-200">
                 <h3 className="text-xl font-semibold font-montserrat text-primary mb-2">
                   {piece.title}
                 </h3>
@@ -45,22 +35,15 @@ const FeaturedArt = () => {
                   {piece.description}
                 </p>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         <div className="text-center">
-          <Button 
-            asChild 
-            size="lg"
-            className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-montserrat font-semibold px-8 py-3 shadow-gold"
-          >
+          <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-montserrat font-semibold px-8 py-3 shadow-gold">
             <Link to="/gallery">View Full Gallery</Link>
           </Button>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default FeaturedArt;
