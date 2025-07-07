@@ -82,26 +82,26 @@ const Gallery = () => {
     },
     {
       id: 10,
-      title: "Tropical Blooms",
-      category: "Florals",
-      image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=80&w=1000&auto=format&fit=crop",
-      description: "Vibrant tropical flowers in full bloom",
+      title: "Ho'okena Beach",
+      category: "Marine Life",
+      image: "/lovable-uploads/c686a92f-908c-453c-a9e8-026ba5700ff8.png",
+      description: "Underwater paradise showing a sea turtle swimming above vibrant coral reef with tropical coastline",
       year: "2024"
     },
     {
       id: 11,
-      title: "Forest Light",
-      category: "Landscapes",
-      image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?q=80&w=1000&auto=format&fit=crop",
-      description: "Sunlight filtering through dense tropical foliage",
-      year: "2023"
+      title: "Beautiful Day",
+      category: "Marine Life",
+      image: "/lovable-uploads/5293744a-4cab-4627-8186-2374c4976ba2.png",
+      description: "Crystal clear waters revealing a stunning coral reef beneath perfect blue skies",
+      year: "2024"
     },
     {
       id: 12,
-      title: "Sunset Reflection",
-      category: "Seascapes", 
-      image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?q=80&w=1000&auto=format&fit=crop",
-      description: "Perfect reflection of sunset colors on calm waters",
+      title: "Palila Bird",
+      category: "Hawaiian Birds",
+      image: "/lovable-uploads/91277f99-eb12-48a7-ae5d-ac1d24c1e83b.png",
+      description: "Endangered Palila birds among native māmane flowers in Hawaii's mountain forest",
       year: "2024"
     }
   ];
