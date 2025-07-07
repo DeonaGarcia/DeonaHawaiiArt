@@ -10,26 +10,98 @@ const Gallery = () => {
   const artworks = [
     {
       id: 1,
-      title: "Kealakekua Bay",
-      category: "Seascapes",
-      image: "/lovable-uploads/986a3c39-91a1-4999-9875-1d4c630d0e01.png",
-      description: "Dramatic turquoise waters swirling beneath lush green Hawaiian coastline",
+      title: "Volcanic Paradise",
+      category: "Landscapes",
+      image: "/lovable-uploads/a1cb556f-d77b-4b65-afdd-5aab992bee8b.png",
+      description: "A dramatic volcanic landscape with turquoise waters and lush tropical scenery",
       year: "2024"
     },
     {
       id: 2,
-      title: "Ho'okena Beach",
+      title: "Dancing Dolphins",
       category: "Marine Life",
-      image: "/lovable-uploads/41c72428-aae1-48df-a1e9-b63caf6645a5.png",
-      description: "A peaceful sea turtle swimming through crystal clear waters with vibrant coral reef below",
+      image: "/lovable-uploads/8115e395-30f3-40d7-a2aa-9f3ff73fb191.png",
+      description: "Playful dolphins swimming beneath golden sunset reflections",
       year: "2024"
     },
     {
       id: 3,
-      title: "Beautiful Day",
+      title: "Kona Sunset",
       category: "Seascapes",
-      image: "/lovable-uploads/db8d16c2-9806-4594-a078-e74b6e4680c6.png",
-      description: "Stunning coral reef formations visible beneath pristine turquoise Hawaiian waters",
+      image: "/lovable-uploads/829d8a8f-ccac-4bd0-ba55-4a11116589b6.png",
+      description: "Vibrant sunset over rolling ocean waves with warm golden hues",
+      year: "2024"
+    },
+    {
+      id: 4,
+      title: "Dolphin Daze",
+      category: "Marine Life",
+      image: "/lovable-uploads/fae00e6a-e4bb-40fb-9063-5995b79fdd1e.png",
+      description: "Inspired bye dolphin days swims",
+      year: "2024"
+    },
+    {
+      id: 5,
+      title: "Kahalu'u Beach Park",
+      category: "Marine Life",
+      image: "/lovable-uploads/0429c256-760f-4e42-8811-403fbd9ac2b6.png",
+      description: "A peaceful sea turtle swimming through crystal clear Hawaiian waters",
+      year: "2024"
+    },
+    {
+      id: 6,
+      title: "Mau'umae Beach",
+      category: "Seascapes",
+      image: "/lovable-uploads/074df5df-41ce-4bb6-92c2-ac788500be8a.png",
+      description: "A beautiful beach in South Kohala on the Big Island",
+      year: "2024"
+    },
+    {
+      id: 7,
+      title: "I'iwi",
+      category: "Hawaiian Birds",
+      image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1000&auto=format&fit=crop",
+      description: "Palm trees silhouetted against a golden Hawaiian sunset",
+  
+    },
+    {
+      id: 2,
+      title: "Honolulu Sailing",
+      category: "Seascapes",
+      image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=1000&auto=format&fit=crop",
+      description: "Magical sunset /moonrise sailing adventure"
+      year: "2024"
+    },
+    {
+      id: 3,
+      title: "Mountain Mist",
+      category: "Landscapes",
+      image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?q=80&w=1000&auto=format&fit=crop",
+      description: "Morning mist rising from lush Hawaiian mountains",
+      year: "2023"
+    },
+    {
+      id: 4,
+      title: "Tropical Blooms",
+      category: "Florals",
+      image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=80&w=1000&auto=format&fit=crop",
+      description: "Vibrant tropical flowers in full bloom",
+      year: "2024"
+    },
+    {
+      id: 5,
+      title: "Forest Light",
+      category: "Landscapes",
+      image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?q=80&w=1000&auto=format&fit=crop",
+      description: "Sunlight filtering through dense tropical foliage",
+      year: "2023"
+    },
+    {
+      id: 6,
+      title: "Sunset Reflection",
+      category: "Seascapes", 
+      image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?q=80&w=1000&auto=format&fit=crop",
+      description: "Perfect reflection of sunset colors on calm waters",
       year: "2024"
     }
   ];
