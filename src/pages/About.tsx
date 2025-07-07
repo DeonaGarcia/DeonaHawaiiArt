@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
+import ContactSection from "@/components/ContactSection";
 
 const About = () => {
   return (
@@ -173,6 +174,8 @@ const About = () => {
           </div>
         </div>
       </main>
+      
+      <ContactSection />
     </div>
   );
 };
