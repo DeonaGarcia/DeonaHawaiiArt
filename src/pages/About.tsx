@@ -44,7 +44,7 @@ const About = () => {
           {/* Ocean Inspiration - Full Photo Display */}
           <div className="mb-16">
             <Card className="overflow-hidden shadow-elegant group">
-              <div className="relative aspect-[21/9]">
+              <div className="relative aspect-[4/3]">
                 <img 
                   src="/lovable-uploads/f22d29c1-055e-4e2f-93e2-c1a245e4190f.png" 
                   alt="Ocean inspiration - underwater swimming scene showing the artist's connection to marine life" 
@@ -85,37 +85,20 @@ const About = () => {
               </Card>
               
               {/* Artistic Process & Vision */}
-              <div className="space-y-8">
-                <Card className="shadow-tropical">
-                  <CardContent className="p-8">
-                    <h4 className="text-xl font-semibold font-montserrat text-primary mb-4">
-                      Artistic Vision
-                    </h4>
-                    <p className="font-montserrat text-muted-foreground leading-relaxed mb-4">
-                      Contemporary multidisciplinary painter competent in all mediums, mixed media and collage, 
-                      focusing on oil paintings that celebrate the islands and ocean.
-                    </p>
-                    <p className="font-montserrat text-muted-foreground leading-relaxed">
-                      Each piece begins with moments of wonder experienced firsthand in the natural beauty of Hawaii.
-                    </p>
-                  </CardContent>
-                </Card>
-                
-                {/* Abstract Art Element */}
-                <div className="relative h-40 overflow-hidden rounded-xl shadow-elegant">
-                  <img 
-                    src="/lovable-uploads/c8c06967-eef4-4644-a10a-f4ef3f1c8aee.png" 
-                    alt="Abstract artistic expression representing creative process" 
-                    className="w-full h-full object-cover opacity-70"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/40 to-secondary/40" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <h4 className="text-lg font-bold font-montserrat text-white text-center">
-                      Expressing Hawaii's Essence
-                    </h4>
-                  </div>
-                </div>
-              </div>
+              <Card className="shadow-tropical">
+                <CardContent className="p-8">
+                  <h4 className="text-xl font-semibold font-montserrat text-primary mb-4">
+                    Artistic Vision
+                  </h4>
+                  <p className="font-montserrat text-muted-foreground leading-relaxed mb-4">
+                    Contemporary multidisciplinary painter competent in all mediums, mixed media and collage, 
+                    focusing on oil paintings that celebrate the islands and ocean.
+                  </p>
+                  <p className="font-montserrat text-muted-foreground leading-relaxed">
+                    Each piece begins with moments of wonder experienced firsthand in the natural beauty of Hawaii.
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
 
