@@ -2,13 +2,27 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 const FeaturedArt = () => {
-  // Placeholder artwork data - to be replaced with actual artwork
-  const featuredPieces = [{
-    id: 2,
-    title: "Dancing Dolphins",
-    image: "/lovable-uploads/8115e395-30f3-40d7-a2aa-9f3ff73fb191.png",
-    description: "Playful dolphins swimming beneath golden sunset reflections"
-  }];
+  // Featured artwork collection
+  const featuredPieces = [
+    {
+      id: 1,
+      title: "Volcanic Paradise",
+      image: "/lovable-uploads/146a89bd-697e-4685-b6f0-4bed0bd10790.png",
+      description: "A dramatic volcanic landscape with turquoise waters and wildlife"
+    },
+    {
+      id: 2,
+      title: "Dancing Dolphins",
+      image: "/lovable-uploads/8115e395-30f3-40d7-a2aa-9f3ff73fb191.png",
+      description: "Playful dolphins swimming beneath golden sunset reflections"
+    },
+    {
+      id: 3,
+      title: "Turtle's Journey",
+      image: "/lovable-uploads/0d1482f8-85ed-41b2-a173-62215d4484df.png",
+      description: "A peaceful sea turtle gliding through vibrant Hawaiian waters"
+    }
+  ];
   return <section className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
