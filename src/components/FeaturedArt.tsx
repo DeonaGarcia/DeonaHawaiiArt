@@ -18,7 +18,7 @@ const FeaturedArt = () => {
     },
     {
       id: 3,
-      title: "Turtle's Journey",
+      title: "Kahalu'u",
       image: "/lovable-uploads/0d1482f8-85ed-41b2-a173-62215d4484df.png",
       description: "A peaceful sea turtle gliding through vibrant Hawaiian waters"
     }
