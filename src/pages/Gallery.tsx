@@ -65,15 +65,15 @@ const Gallery = () => {
   
     },
     {
-      id: 2,
+      id: 8,
       title: "Honolulu Sailing",
       category: "Seascapes",
       image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=1000&auto=format&fit=crop",
-      description: "Magical sunset /moonrise sailing adventure"
+      description: "Magical sunset /moonrise sailing adventure",
       year: "2024"
     },
     {
-      id: 3,
+      id: 9,
       title: "Mountain Mist",
       category: "Landscapes",
       image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?q=80&w=1000&auto=format&fit=crop",
@@ -81,7 +81,7 @@ const Gallery = () => {
       year: "2023"
     },
     {
-      id: 4,
+      id: 10,
       title: "Tropical Blooms",
       category: "Florals",
       image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=80&w=1000&auto=format&fit=crop",
@@ -89,7 +89,7 @@ const Gallery = () => {
       year: "2024"
     },
     {
-      id: 5,
+      id: 11,
       title: "Forest Light",
       category: "Landscapes",
       image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?q=80&w=1000&auto=format&fit=crop",
@@ -97,7 +97,7 @@ const Gallery = () => {
       year: "2023"
     },
     {
-      id: 6,
+      id: 12,
       title: "Sunset Reflection",
       category: "Seascapes", 
       image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?q=80&w=1000&auto=format&fit=crop",
@@ -106,7 +106,7 @@ const Gallery = () => {
     }
   ];
 
-  const categories = ["All", "Landscapes", "Seascapes", "Marine Life"];
+  const categories = ["All", "Landscapes", "Seascapes", "Marine Life", "Hawaiian Birds", "Florals"];
 
   const filteredArtworks = selectedCategory === "All" 
     ? artworks 

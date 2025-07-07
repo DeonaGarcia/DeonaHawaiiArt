@@ -89,6 +89,56 @@ const About = () => {
             </Card>
           </div>
 
+          {/* My Inspiration */}
+          <div className="mb-20">
+            <Card className="shadow-tropical">
+              <CardContent className="p-8 md:p-12">
+                <h2 className="text-3xl font-bold font-montserrat text-primary mb-6 text-center">
+                  My Inspiration
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-xl font-semibold font-montserrat text-primary mb-4">
+                      Nature's Beauty
+                    </h3>
+                    <p className="text-muted-foreground font-montserrat text-sm leading-relaxed mb-4">
+                      [Add your thoughts about how nature inspires your art - the colors, textures, 
+                      movements that capture your imagination...]
+                    </p>
+                  </div>
+                  
+                  <div>
+                    <h3 className="text-xl font-semibold font-montserrat text-primary mb-4">
+                      Hawaiian Culture
+                    </h3>
+                    <p className="text-muted-foreground font-montserrat text-sm leading-relaxed mb-4">
+                      [Share how Hawaiian culture, traditions, and the spirit of aloha influence 
+                      your artistic vision...]
+                    </p>
+                  </div>
+                  
+                  <div>
+                    <h3 className="text-xl font-semibold font-montserrat text-primary mb-4">
+                      Ocean Connection
+                    </h3>
+                    <p className="text-muted-foreground font-montserrat text-sm leading-relaxed mb-4">
+                      [Describe your relationship with the ocean and how it appears in your work...]
+                    </p>
+                  </div>
+                  
+                  <div>
+                    <h3 className="text-xl font-semibold font-montserrat text-primary mb-4">
+                      Daily Moments
+                    </h3>
+                    <p className="text-muted-foreground font-montserrat text-sm leading-relaxed mb-4">
+                      [Talk about the everyday moments in Hawaii that spark your creativity...]
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
           {/* Biography */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
             <Card className="shadow-tropical">
