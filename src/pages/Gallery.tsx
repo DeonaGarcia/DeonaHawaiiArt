@@ -37,7 +37,7 @@ const Gallery = () => {
       title: "Dolphin Daze",
       category: "Marine Life",
       image: "/lovable-uploads/fae00e6a-e4bb-40fb-9063-5995b79fdd1e.png",
-      description: "An abstract interpretation of dolphins surrounded by colorful marine patterns",
+      description: "Inspired by dolphin swims",
       year: "2024"
     },
     {
