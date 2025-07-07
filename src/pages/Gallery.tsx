@@ -34,10 +34,10 @@ const Gallery = () => {
     },
     {
       id: 4,
-      title: "Mystical Whale",
+      title: "Dancing Dolphins",
       category: "Marine Life",
       image: "/lovable-uploads/fae00e6a-e4bb-40fb-9063-5995b79fdd1e.png",
-      description: "An abstract interpretation of a whale surrounded by colorful marine patterns",
+      description: "An abstract interpretation of dolphins surrounded by colorful marine patterns",
       year: "2024"
     },
     {
@@ -165,9 +165,9 @@ const Gallery = () => {
                       <h3 className="text-xl font-semibold font-montserrat text-white mb-1">
                         {artwork.title}
                       </h3>
-                      <p className="text-white/90 font-montserrat text-sm">
-                        {artwork.year} • {artwork.category}
-                      </p>
+                       <p className="text-white/90 font-montserrat text-sm">
+                         {artwork.category}
+                       </p>
                     </div>
                   </div>
                 </div>
@@ -176,9 +176,9 @@ const Gallery = () => {
                   <h3 className="text-xl font-semibold font-montserrat text-primary mb-2">
                     {artwork.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground font-montserrat mb-2">
-                    {artwork.category} • {artwork.year}
-                  </p>
+                   <p className="text-sm text-muted-foreground font-montserrat mb-2">
+                     {artwork.category}
+                   </p>
                   <p className="text-muted-foreground font-montserrat text-sm leading-relaxed">
                     {artwork.description}
                   </p>
