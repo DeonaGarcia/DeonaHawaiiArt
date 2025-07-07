@@ -50,10 +50,10 @@ const Gallery = () => {
     },
     {
       id: 6,
-      title: "Kahalu'u Beach Park",
+      title: "Mau'umae Beach",
       category: "Seascapes",
       image: "/lovable-uploads/074df5df-41ce-4bb6-92c2-ac788500be8a.png",
-      description: "A pristine Hawaiian beach with crystal clear turquoise waters and golden sand",
+      description: "A beautiful beach in South Kohala on the Big Island",
       year: "2024"
     },
     {
