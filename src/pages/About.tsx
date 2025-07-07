@@ -16,87 +16,9 @@ const About = () => {
             <h1 className="text-4xl md:text-6xl font-bold font-montserrat text-primary mb-8">
               About Deona
             </h1>
-            <p className="text-xl text-muted-foreground font-montserrat max-w-3xl mx-auto leading-relaxed">
-              A multidisciplinary painter and mixed media artist bringing the vibrant beauty of Hawaii to life through art
-            </p>
           </div>
 
-          {/* Visual Collage Section */}
-          <div className="mb-20">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-              
-              {/* Ocean Inspiration - Large Image */}
-              <div className="lg:col-span-2">
-                <Card className="overflow-hidden shadow-elegant group">
-                  <div className="relative aspect-[16/10]">
-                    <img 
-                      src="/lovable-uploads/f22d29c1-055e-4e2f-93e2-c1a245e4190f.png" 
-                      alt="Ocean inspiration - underwater swimming scene" 
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                    <div className="absolute bottom-6 left-6 right-6 text-white">
-                      <h3 className="text-2xl font-bold font-montserrat mb-3">Ocean Inspiration</h3>
-                      <p className="font-montserrat text-white/90 leading-relaxed">
-                        "My creative practice is inspired by long morning swims of underwater beauty, 
-                        diverse beaches and the coastlines."
-                      </p>
-                    </div>
-                  </div>
-                </Card>
-              </div>
-
-              {/* Artist in Studio */}
-              <div className="space-y-8">
-                <Card className="overflow-hidden shadow-elegant group">
-                  <div className="relative aspect-[4/5]">
-                    <img 
-                      src="/lovable-uploads/f3496b5e-41fd-4ac5-a673-dfe0dd815580.png" 
-                      alt="Artist Deona working in her studio" 
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                    <div className="absolute bottom-4 left-4 right-4 text-white">
-                      <h4 className="text-lg font-semibold font-montserrat mb-2">In the Studio</h4>
-                      <p className="text-sm font-montserrat text-white/90">
-                        Creating vibrant island-inspired artwork
-                      </p>
-                    </div>
-                  </div>
-                </Card>
-                
-                {/* Artistic Vision Card */}
-                <Card className="shadow-tropical">
-                  <CardContent className="p-6">
-                    <h4 className="text-lg font-semibold font-montserrat text-primary mb-3">
-                      Artistic Vision
-                    </h4>
-                    <p className="text-sm font-montserrat text-muted-foreground leading-relaxed">
-                      Contemporary multidisciplinary painter competent in all mediums, mixed media and collage, 
-                      focusing on oil paintings that celebrate the islands.
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-            
-            {/* Abstract Art Element */}
-            <div className="relative h-32 overflow-hidden rounded-2xl shadow-elegant">
-              <img 
-                src="/lovable-uploads/c8c06967-eef4-4644-a10a-f4ef3f1c8aee.png" 
-                alt="Abstract artistic expression" 
-                className="w-full h-full object-cover opacity-60"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-secondary/30" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <h3 className="text-2xl font-bold font-montserrat text-white text-center">
-                  Expressing Hawaii's Beauty Through Art
-                </h3>
-              </div>
-            </div>
-          </div>
-
-          {/* Artist Statement */}
+          {/* Complete Art Statement - Featured at top */}
           <div className="mb-20">
             <Card className="shadow-tropical">
               <CardContent className="p-8 md:p-12">
@@ -117,6 +39,84 @@ const About = () => {
                 </div>
               </CardContent>
             </Card>
+          </div>
+
+          {/* Ocean Inspiration - Full Photo Display */}
+          <div className="mb-16">
+            <Card className="overflow-hidden shadow-elegant group">
+              <div className="relative aspect-[21/9]">
+                <img 
+                  src="/lovable-uploads/f22d29c1-055e-4e2f-93e2-c1a245e4190f.png" 
+                  alt="Ocean inspiration - underwater swimming scene showing the artist's connection to marine life" 
+                  className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                <div className="absolute bottom-8 left-8 right-8 text-white">
+                  <h3 className="text-3xl font-bold font-montserrat mb-4">Ocean Inspiration</h3>
+                  <p className="text-xl font-montserrat text-white/90 leading-relaxed max-w-3xl">
+                    "My creative practice is inspired by long morning swims of underwater beauty, 
+                    diverse beaches and the coastlines."
+                  </p>
+                </div>
+              </div>
+            </Card>
+          </div>
+
+          {/* Visual Collage Section - Remaining Photos */}
+          <div className="mb-20">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+              
+              {/* Artist in Studio */}
+              <Card className="overflow-hidden shadow-elegant group">
+                <div className="relative aspect-[4/5]">
+                  <img 
+                    src="/lovable-uploads/f3496b5e-41fd-4ac5-a673-dfe0dd815580.png" 
+                    alt="Artist Deona working in her studio painting a vibrant seascape" 
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <div className="absolute bottom-6 left-6 right-6 text-white">
+                    <h4 className="text-xl font-semibold font-montserrat mb-3">In the Studio</h4>
+                    <p className="font-montserrat text-white/90 leading-relaxed">
+                      Creating vibrant island-inspired artwork with passion and dedication
+                    </p>
+                  </div>
+                </div>
+              </Card>
+              
+              {/* Artistic Process & Vision */}
+              <div className="space-y-8">
+                <Card className="shadow-tropical">
+                  <CardContent className="p-8">
+                    <h4 className="text-xl font-semibold font-montserrat text-primary mb-4">
+                      Artistic Vision
+                    </h4>
+                    <p className="font-montserrat text-muted-foreground leading-relaxed mb-4">
+                      Contemporary multidisciplinary painter competent in all mediums, mixed media and collage, 
+                      focusing on oil paintings that celebrate the islands and ocean.
+                    </p>
+                    <p className="font-montserrat text-muted-foreground leading-relaxed">
+                      Each piece begins with moments of wonder experienced firsthand in the natural beauty of Hawaii.
+                    </p>
+                  </CardContent>
+                </Card>
+                
+                {/* Abstract Art Element */}
+                <div className="relative h-40 overflow-hidden rounded-xl shadow-elegant">
+                  <img 
+                    src="/lovable-uploads/c8c06967-eef4-4644-a10a-f4ef3f1c8aee.png" 
+                    alt="Abstract artistic expression representing creative process" 
+                    className="w-full h-full object-cover opacity-70"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/40 to-secondary/40" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <h4 className="text-lg font-bold font-montserrat text-white text-center">
+                      Expressing Hawaii's Essence
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Biography Section */}
