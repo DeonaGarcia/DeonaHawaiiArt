@@ -74,11 +74,11 @@ const Gallery = () => {
     },
     {
       id: 9,
-      title: "Mountain Mist",
-      category: "Landscapes",
-      image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?q=80&w=1000&auto=format&fit=crop",
-      description: "Morning mist rising from lush Hawaiian mountains",
-      year: "2023"
+      title: "Kealakekua Bay",
+      category: "Seascapes",
+      image: "/lovable-uploads/90985669-cf2a-43a9-a033-dc802cf4441a.png",
+      description: "Dramatic cliffs and swirling turquoise waters of historic Kealakekua Bay",
+      year: "2024"
     },
     {
       id: 10,
