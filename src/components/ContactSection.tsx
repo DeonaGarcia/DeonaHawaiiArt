@@ -59,7 +59,7 @@ const ContactSection = () => {
                 <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center">
                   <span className="text-secondary-foreground font-semibold">📧</span>
                 </div>
-                <span className="font-montserrat text-foreground">aloha@deonahawaiart.com</span>
+                <span className="font-montserrat text-foreground">aloha@deonahawaiiart.com</span>
               </div>
               
               <div className="flex items-center space-x-3">
