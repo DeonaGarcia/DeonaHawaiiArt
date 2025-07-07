@@ -12,7 +12,7 @@ const Gallery = () => {
       id: 1,
       title: "Volcanic Paradise",
       category: "Landscapes",
-      image: "/lovable-uploads/95a751d3-8c53-4ca8-8bff-4e6bb3e00c60.png",
+      image: "/lovable-uploads/a1cb556f-d77b-4b65-afdd-5aab992bee8b.png",
       description: "A dramatic volcanic landscape with turquoise waters and lush tropical scenery",
       year: "2024"
     },
