@@ -60,16 +60,16 @@ const Gallery = () => {
       id: 7,
       title: "I'iwi",
       category: "Hawaiian Birds",
-      image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1000&auto=format&fit=crop",
-      description: "Palm trees silhouetted against a golden Hawaiian sunset",
-  
+      image: "/lovable-uploads/e3e3516a-2899-475a-b579-3cdc61c03c0e.png",
+      description: "A vibrant red I'iwi bird soaring through blooming lehua blossoms",
+      year: "2024"
     },
     {
       id: 8,
       title: "Honolulu Sailing",
       category: "Seascapes",
-      image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=1000&auto=format&fit=crop",
-      description: "Magical sunset /moonrise sailing adventure",
+      image: "/lovable-uploads/9d03870c-0915-4082-aa64-8092fe0fc72b.png",
+      description: "Sailboat gliding through azure waters with Honolulu skyline and dramatic mountain backdrop",
       year: "2024"
     },
     {
