@@ -26,7 +26,7 @@ const Gallery = () => {
     },
     {
       id: 3,
-      title: "Ocean Sunset",
+      title: "Kona Sunset",
       category: "Seascapes",
       image: "/lovable-uploads/829d8a8f-ccac-4bd0-ba55-4a11116589b6.png",
       description: "Vibrant sunset over rolling ocean waves with warm golden hues",
