@@ -14,7 +14,7 @@ const Gallery = () => {
       category: "Landscapes",
       image: "/lovable-uploads/a1cb556f-d77b-4b65-afdd-5aab992bee8b.png",
       description: "A dramatic volcanic landscape with turquoise waters and lush tropical scenery",
-      year: "2024"
+      
     },
     {
       id: 2,
@@ -22,7 +22,7 @@ const Gallery = () => {
       category: "Marine Life",
       image: "/lovable-uploads/8115e395-30f3-40d7-a2aa-9f3ff73fb191.png",
       description: "Playful dolphins swimming beneath golden sunset reflections",
-      year: "2024"
+      
     },
     {
       id: 3,
@@ -30,7 +30,7 @@ const Gallery = () => {
       category: "Seascapes",
       image: "/lovable-uploads/829d8a8f-ccac-4bd0-ba55-4a11116589b6.png",
       description: "Vibrant sunset over rolling ocean waves with warm golden hues",
-      year: "2024"
+      
     },
     {
       id: 4,
@@ -38,7 +38,7 @@ const Gallery = () => {
       category: "Marine Life",
       image: "/lovable-uploads/fae00e6a-e4bb-40fb-9063-5995b79fdd1e.png",
       description: "Inspired bye dolphin days swims",
-      year: "2024"
+      
     },
     {
       id: 5,
@@ -54,7 +54,7 @@ const Gallery = () => {
       category: "Seascapes",
       image: "/lovable-uploads/074df5df-41ce-4bb6-92c2-ac788500be8a.png",
       description: "A beautiful beach in South Kohala on the Big Island",
-      year: "2024"
+      
     },
     {
       id: 7,
@@ -62,15 +62,15 @@ const Gallery = () => {
       category: "Hawaiian Birds",
       image: "/lovable-uploads/e3e3516a-2899-475a-b579-3cdc61c03c0e.png",
       description: "A vibrant red I'iwi bird soaring through blooming lehua blossoms",
-      year: "2024"
+      
     },
     {
       id: 8,
       title: "Honolulu Sailing",
       category: "Seascapes",
       image: "/lovable-uploads/9d03870c-0915-4082-aa64-8092fe0fc72b.png",
-      description: "Sailboat gliding through azure waters with Honolulu skyline and dramatic mountain backdrop",
-      year: "2024"
+      description: "Magical sailing experience at sunset as full moon appeared",
+      
     },
     {
       id: 9,
@@ -78,23 +78,23 @@ const Gallery = () => {
       category: "Seascapes",
       image: "/lovable-uploads/90985669-cf2a-43a9-a033-dc802cf4441a.png",
       description: "Dramatic cliffs and swirling turquoise waters of historic Kealakekua Bay",
-      year: "2024"
+      
     },
     {
       id: 10,
       title: "Ho'okena Beach",
       category: "Marine Life",
       image: "/lovable-uploads/c686a92f-908c-453c-a9e8-026ba5700ff8.png",
-      description: "Underwater paradise showing a sea turtle swimming above vibrant coral reef with tropical coastline",
-      year: "2024"
+      description: "Underwater  showing a sea turtle swimming above  coral reef with South Kona coastline",
+      
     },
     {
       id: 11,
       title: "Beautiful Day",
       category: "Marine Life",
       image: "/lovable-uploads/5293744a-4cab-4627-8186-2374c4976ba2.png",
-      description: "Crystal clear waters revealing a stunning coral reef beneath perfect blue skies",
-      year: "2024"
+      description: "Crystal clear waters revealing coral reefs beneath blue skies",
+      
     },
     {
       id: 12,
@@ -102,7 +102,7 @@ const Gallery = () => {
       category: "Hawaiian Birds",
       image: "/lovable-uploads/91277f99-eb12-48a7-ae5d-ac1d24c1e83b.png",
       description: "Endangered Palila birds among native māmane flowers in Hawaii's mountain forest",
-      year: "2024"
+      
     }
   ];
 
