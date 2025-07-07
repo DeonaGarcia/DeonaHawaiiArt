@@ -58,18 +58,18 @@ const Gallery = () => {
     },
     {
       id: 7,
-      title: "Golden Hour Palms",
-      category: "Landscapes",
+      title: "I'iwi",
+      category: "Hawaiian Birds",
       image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1000&auto=format&fit=crop",
       description: "Palm trees silhouetted against a golden Hawaiian sunset",
-      year: "2024"
+  
     },
     {
       id: 2,
-      title: "Ocean Breeze",
+      title: "Honolulu Sailing",
       category: "Seascapes",
       image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=1000&auto=format&fit=crop",
-      description: "Waves gently lapping the shores of a secluded beach",
+      description: "Magical sunset /moonrise sailing adventure"
       year: "2024"
     },
     {
