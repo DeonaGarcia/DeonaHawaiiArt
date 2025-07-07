@@ -34,7 +34,7 @@ const Gallery = () => {
     },
     {
       id: 4,
-      title: "Mau'umae Beach",
+      title: "Dolphin Daze",
       category: "Marine Life",
       image: "/lovable-uploads/fae00e6a-e4bb-40fb-9063-5995b79fdd1e.png",
       description: "Inspired bye dolphin days swims",
