@@ -10,202 +10,131 @@ const About = () => {
       
       <main className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Hero Section */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold font-montserrat text-primary mb-6">
-                About the Artist
-              </h1>
-              <p className="text-lg text-muted-foreground font-montserrat leading-relaxed mb-8">
-                Aloha! I'm Deona, a Hawaii-based artist whose work is deeply inspired by 
-                the natural beauty and spiritual essence of the Hawaiian Islands. 
-                Each brushstroke captures my love for this paradise I call home.
-              </p>
-              <div className="flex gap-4">
-                <Button 
-                  asChild 
-                  className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-montserrat font-semibold shadow-gold"
-                >
-                  <Link to="/gallery">View My Work</Link>
-                </Button>
-                <Button 
-                  asChild 
-                  variant="outline"
-                  className="font-montserrat font-semibold hover:bg-primary hover:text-primary-foreground"
-                >
-                  <a href="#contact">Commission Art</a>
-                </Button>
+          
+          {/* Collage Hero Section */}
+          <div className="relative mb-20">
+            <h1 className="text-4xl md:text-6xl font-bold font-montserrat text-primary mb-12 text-center">
+              About Deona
+            </h1>
+            
+            {/* Main Collage Grid */}
+            <div className="grid grid-cols-12 gap-6 h-[800px]">
+              
+              {/* Left Column - Ocean Inspiration */}
+              <div className="col-span-12 md:col-span-5 relative">
+                <Card className="h-full overflow-hidden shadow-elegant group">
+                  <div className="relative h-full">
+                    <img 
+                      src="/lovable-uploads/f22d29c1-055e-4e2f-93e2-c1a245e4190f.png" 
+                      alt="Ocean inspiration - underwater scene" 
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                    <div className="absolute bottom-6 left-6 right-6 text-white">
+                      <h3 className="text-2xl font-bold font-montserrat mb-3">Ocean Inspiration</h3>
+                      <p className="font-montserrat text-white/90 leading-relaxed">
+                        "My creative practice is inspired by long morning swims of underwater beauty, 
+                        diverse beaches and the coastlines."
+                      </p>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+
+              {/* Right Column - Split into two sections */}
+              <div className="col-span-12 md:col-span-7 flex flex-col gap-6">
+                
+                {/* Top Right - Artist Statement */}
+                <Card className="flex-1 shadow-tropical">
+                  <CardContent className="p-8 h-full flex flex-col justify-center">
+                    <h2 className="text-3xl font-bold font-montserrat text-primary mb-6">
+                      Art Statement
+                    </h2>
+                    <p className="text-lg font-montserrat text-foreground leading-relaxed mb-4">
+                      As a multidisciplinary painter and mixed media artist of Hawaii, my passion lies in the creation of 
+                      <span className="font-semibold text-primary"> vibrant and expressive artworks</span> that capture the beauty of the 
+                      islands and their culture.
+                    </p>
+                    <p className="text-lg font-montserrat text-foreground leading-relaxed">
+                      I paint colorful landscapes, dramatic erupting volcanoes and impressionistic seascapes inspired by the 
+                      diversity of the islands and my love for them. I hope to communicate the tremendous beauty and culture of 
+                      Hawaii to my audience, inviting people to <span className="font-semibold text-secondary">discover, appreciate, and celebrate</span> this unique place through my artistic lens.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                {/* Bottom Right - Split between Artistic Process and Abstract Element */}
+                <div className="flex gap-6 flex-1">
+                  
+                  {/* Artist at Work */}
+                  <Card className="flex-1 overflow-hidden shadow-elegant group">
+                    <div className="relative h-full">
+                      <img 
+                        src="/lovable-uploads/f3496b5e-41fd-4ac5-a673-dfe0dd815580.png" 
+                        alt="Artist at work in studio" 
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                      <div className="absolute bottom-4 left-4 right-4 text-white">
+                        <h4 className="text-lg font-semibold font-montserrat mb-2">In the Studio</h4>
+                        <p className="text-sm font-montserrat text-white/90">
+                          Creating vibrant island-inspired artwork
+                        </p>
+                      </div>
+                    </div>
+                  </Card>
+
+                  {/* Abstract Artistic Element */}
+                  <Card className="flex-1 overflow-hidden shadow-elegant">
+                    <div className="relative h-full">
+                      <img 
+                        src="/lovable-uploads/c8c06967-eef4-4644-a10a-f4ef3f1c8aee.png" 
+                        alt="Artistic expression" 
+                        className="w-full h-full object-cover opacity-80"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20" />
+                    </div>
+                  </Card>
+                </div>
               </div>
             </div>
-            
-            {/* Artist Photo Placeholder */}
-            <div className="relative">
-              <Card className="overflow-hidden shadow-elegant">
-                <div className="aspect-square bg-gradient-tropical flex items-center justify-center">
-                  <div className="text-center text-white">
-                    <div className="w-32 h-32 bg-white/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                      <span className="text-4xl">🎨</span>
-                    </div>
-                    <p className="font-montserrat font-medium">Artist Photo</p>
-                    <p className="font-montserrat text-sm opacity-90">Upload your photo here</p>
-                  </div>
-                </div>
-              </Card>
-            </div>
           </div>
 
-          {/* Artist Statement */}
+          {/* Biography Section */}
           <div className="mb-20">
             <Card className="shadow-tropical">
               <CardContent className="p-8 md:p-12">
-                <h2 className="text-3xl font-bold font-montserrat text-primary mb-6 text-center">
-                  Artist Statement
-                </h2>
-                <div className="prose prose-lg max-w-none font-montserrat text-foreground">
-                  <p className="text-lg leading-relaxed mb-6">
-                    My art is a celebration of Hawaii's extraordinary natural beauty and the profound 
-                    sense of peace that these islands bring to the soul. Having lived here for over 
-                    a decade, I've witnessed countless sunrises and sunsets that paint the sky in 
-                    colors I never imagined possible. These moments of pure magic are what I strive 
-                    to capture in my paintings.
-                  </p>
-                  
-                  <p className="text-lg leading-relaxed mb-6">
-                    Working primarily in acrylics and oils, I focus on the interplay of light and 
-                    color that makes Hawaii so unique. Whether it's the golden hour illuminating 
-                    palm fronds, the deep blues of the Pacific meeting volcanic shores, or the 
-                    vibrant tropical flora that blooms year-round, each piece begins with a moment 
-                    of wonder experienced firsthand.
-                  </p>
-                  
-                  <p className="text-lg leading-relaxed">
-                    I believe art has the power to transport viewers to a place of serenity and 
-                    connection with nature. My hope is that each painting serves as a window to 
-                    Hawaii's paradise, bringing the islands' peaceful energy into homes and hearts 
-                    around the world.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* My Inspiration */}
-          <div className="mb-20">
-            <Card className="shadow-tropical">
-              <CardContent className="p-8 md:p-12">
-                <h2 className="text-3xl font-bold font-montserrat text-primary mb-6 text-center">
-                  My Inspiration
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-xl font-semibold font-montserrat text-primary mb-4">
-                      Nature's Beauty
-                    </h3>
-                    <p className="text-muted-foreground font-montserrat text-sm leading-relaxed mb-4">
-                      [Add your thoughts about how nature inspires your art - the colors, textures, 
-                      movements that capture your imagination...]
-                    </p>
-                  </div>
-                  
-                  <div>
-                    <h3 className="text-xl font-semibold font-montserrat text-primary mb-4">
-                      Hawaiian Culture
-                    </h3>
-                    <p className="text-muted-foreground font-montserrat text-sm leading-relaxed mb-4">
-                      [Share how Hawaiian culture, traditions, and the spirit of aloha influence 
-                      your artistic vision...]
-                    </p>
-                  </div>
-                  
-                  <div>
-                    <h3 className="text-xl font-semibold font-montserrat text-primary mb-4">
-                      Ocean Connection
-                    </h3>
-                    <p className="text-muted-foreground font-montserrat text-sm leading-relaxed mb-4">
-                      [Describe your relationship with the ocean and how it appears in your work...]
-                    </p>
-                  </div>
-                  
-                  <div>
-                    <h3 className="text-xl font-semibold font-montserrat text-primary mb-4">
-                      Daily Moments
-                    </h3>
-                    <p className="text-muted-foreground font-montserrat text-sm leading-relaxed mb-4">
-                      [Talk about the everyday moments in Hawaii that spark your creativity...]
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Biography */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
-            <Card className="shadow-tropical">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-semibold font-montserrat text-primary mb-6">
+                <h2 className="text-3xl font-bold font-montserrat text-primary mb-8 text-center">
                   My Journey
-                </h3>
-                <div className="space-y-4 font-montserrat text-muted-foreground">
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">Early Beginnings</h4>
-                    <p className="text-sm leading-relaxed">
-                      Born and raised on the mainland, I discovered my passion for art during 
-                      childhood. My first visit to Hawaii at age 25 changed everything - I knew 
-                      I had found my artistic inspiration and spiritual home.
+                    <h3 className="text-xl font-semibold font-montserrat text-secondary mb-4">
+                      Island Roots & Growth
+                    </h3>
+                    <p className="text-muted-foreground font-montserrat leading-relaxed mb-6">
+                      Deona Garcia is an artist residing on the Big Island of Hawaii. The artist came to the islands as a creative teen, 
+                      raised a family on Kauai before relocating to the Big Island. Leaving the islands for a season gave Deona the 
+                      opportunity to attend art school and return to Kona with an education and a love for expressing the beauty of the 
+                      islands in vivid color.
+                    </p>
+                    <p className="text-muted-foreground font-montserrat leading-relaxed">
+                      Deona is a contemporary multidisciplinary painter competent in all mediums, mixed media and collage, 
+                      focusing more on oil paintings.
                     </p>
                   </div>
                   
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">Island Life</h4>
-                    <p className="text-sm leading-relaxed">
-                      After moving to Hawaii in 2012, I immersed myself in the local art community 
-                      and began developing my signature style that blends traditional landscape 
-                      techniques with the unique luminosity of tropical light.
+                    <h3 className="text-xl font-semibold font-montserrat text-secondary mb-4">
+                      Artistic Vision
+                    </h3>
+                    <p className="text-muted-foreground font-montserrat leading-relaxed mb-6">
+                      Deona's artwork is a vibrant celebration of the islands and the ocean that surrounds them. 
+                      The artist's creative practice is inspired by long morning swims of underwater beauty, diverse beaches and the coastlines.
                     </p>
-                  </div>
-                  
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-2">Today</h4>
-                    <p className="text-sm leading-relaxed">
-                      My studio overlooks the ocean, where I paint daily, inspired by the 
-                      ever-changing moods of the sea and sky. I continue to explore new ways 
-                      to capture Hawaii's essence on canvas.
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="shadow-tropical">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-semibold font-montserrat text-primary mb-6">
-                  Achievements & Recognition
-                </h3>
-                <div className="space-y-4 font-montserrat text-muted-foreground">
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-2">Exhibitions</h4>
-                    <ul className="text-sm space-y-1 leading-relaxed">
-                      <li>• Honolulu Museum of Art - Group Show (2023)</li>
-                      <li>• Maui Arts & Cultural Center - Solo Exhibition (2022)</li>
-                      <li>• Kauai Gallery Walk - Featured Artist (2021)</li>
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-2">Awards</h4>
-                    <ul className="text-sm space-y-1 leading-relaxed">
-                      <li>• Hawaii Art Society - Excellence Award (2023)</li>
-                      <li>• Pacific Rim Artists - Best Landscape (2022)</li>
-                      <li>• Island Arts Festival - People's Choice (2021)</li>
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-2">Collections</h4>
-                    <p className="text-sm leading-relaxed">
-                      My work is held in private collections across Hawaii, the mainland US, 
-                      Japan, and Europe, bringing the spirit of aloha to art lovers worldwide.
+                    <p className="text-muted-foreground font-montserrat leading-relaxed">
+                      Deona's art has sold and is in private collections in Hawaii and on the mainland, bringing the spirit of the islands 
+                      to art lovers across the country.
                     </p>
                   </div>
                 </div>
@@ -219,16 +148,26 @@ const About = () => {
               Let's Create Something Beautiful Together
             </h2>
             <p className="text-muted-foreground font-montserrat mb-8 max-w-2xl mx-auto">
-              Whether you're interested in commissioning a custom piece or have questions about 
-              my existing work, I'd love to connect and share the beauty of Hawaii through art.
+              Whether you're interested in commissioning a custom piece that captures your connection to Hawaii or have questions about 
+              my existing work, I'd love to connect and share the beauty of the islands through art.
             </p>
-            <Button 
-              asChild 
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-montserrat font-semibold px-8 py-3 shadow-tropical"
-            >
-              <a href="#contact">Contact Me</a>
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                asChild 
+                size="lg"
+                className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-montserrat font-semibold px-8 py-3 shadow-gold"
+              >
+                <Link to="/gallery">View My Gallery</Link>
+              </Button>
+              <Button 
+                asChild 
+                size="lg"
+                variant="outline"
+                className="font-montserrat font-semibold hover:bg-primary hover:text-primary-foreground"
+              >
+                <a href="#contact">Commission Art</a>
+              </Button>
+            </div>
           </div>
         </div>
       </main>
