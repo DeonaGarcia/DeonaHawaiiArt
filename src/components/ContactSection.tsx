@@ -38,10 +38,7 @@ const ContactSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold font-montserrat text-primary mb-4">
             Get In Touch
           </h2>
-          <p className="text-lg text-muted-foreground font-montserrat max-w-2xl mx-auto">
-            Interested in commissioning a piece or have questions about my work? 
-            I'd love to hear from you.
-          </p>
+          <p className="text-lg text-muted-foreground font-montserrat max-w-2xl mx-auto">Interested in commissioning a piece or purchasing originals or prints of my work ? I'd love to hear from you!</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
