@@ -199,22 +199,46 @@ const Gallery = () => {
             </div>
           )}
 
-          {/* CTA Section */}
-          <div className="text-center mt-20 py-16 bg-muted rounded-2xl">
-            <h2 className="text-3xl font-bold font-montserrat text-primary mb-4">
-              Interested in a Commission?
+          {/* Coming Soon Section */}
+          <div className="mt-20">
+            <h2 className="text-3xl font-bold font-montserrat text-primary text-center mb-12">
+              More Work Coming Soon
             </h2>
-            <p className="text-muted-foreground font-montserrat mb-8 max-w-2xl mx-auto">
-              I create custom pieces that capture your personal connection to Hawaii. 
-              Let's discuss bringing your vision to life.
-            </p>
-            <Button 
-              asChild 
-              size="lg"
-              className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-montserrat font-semibold px-8 py-3 shadow-gold"
-            >
-              <a href="#contact">Get In Touch</a>
-            </Button>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[1, 2, 3, 4, 5, 6].map((placeholder) => (
+                <Card key={`placeholder-${placeholder}`} className="group gallery-item overflow-hidden shadow-tropical opacity-60">
+                  <div className="relative overflow-hidden">
+                    <AspectRatio ratio={16/12} className="w-full">
+                      <div className="w-full h-full bg-muted flex items-center justify-center">
+                        <div className="text-center">
+                          <div className="w-16 h-16 mx-auto mb-4 bg-muted-foreground/20 rounded-full flex items-center justify-center">
+                            <svg 
+                              className="w-8 h-8 text-muted-foreground" 
+                              fill="none" 
+                              stroke="currentColor" 
+                              viewBox="0 0 24 24"
+                            >
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                            </svg>
+                          </div>
+                          <p className="text-sm font-montserrat text-muted-foreground">
+                            Coming Soon
+                          </p>
+                        </div>
+                      </div>
+                    </AspectRatio>
+                  </div>
+                  
+                  <CardContent className="p-6">
+                    <div className="space-y-2">
+                      <div className="h-5 bg-muted rounded animate-pulse"></div>
+                      <div className="h-4 bg-muted rounded w-3/4 animate-pulse"></div>
+                      <div className="h-3 bg-muted rounded w-1/2 animate-pulse"></div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </main>
