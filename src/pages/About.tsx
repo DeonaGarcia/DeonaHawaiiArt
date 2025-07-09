@@ -78,7 +78,7 @@ const About = () => {
                   <h4 className="text-xl font-semibold font-montserrat text-primary mb-4">
                     Artistic Vision
                   </h4>
-                  <p className="font-montserrat text-muted-foreground leading-relaxed mb-4">Deona is a Contemporary multidisciplinary painter competent in all mediums, mixed media and collage, focusing on oil paintings that celebrate the islands and ocean.</p>
+                  <p className="font-montserrat text-muted-foreground leading-relaxed mb-4">Deona is a Contemporary multidisciplinary painter competent in all mediums: watercolors, mixed media and collage, focusing on oil paintings that celebrate the islands and ocean.</p>
                   <p className="font-montserrat text-muted-foreground leading-relaxed">
                     Each piece begins with moments of wonder experienced firsthand in the natural beauty of Hawaii.
                   </p>
