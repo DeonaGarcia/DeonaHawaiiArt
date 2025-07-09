@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Navigation from "@/components/Navigation";
 
 const Gallery = () => {
@@ -152,11 +153,13 @@ const Gallery = () => {
             {filteredArtworks.map((artwork) => (
               <Card key={artwork.id} className="group gallery-item overflow-hidden shadow-tropical">
                 <div className="relative overflow-hidden">
-                  <img
-                    src={artwork.image}
-                    alt={artwork.title}
-                    className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
+                  <AspectRatio ratio={16/12} className="w-full">
+                    <img
+                      src={artwork.image}
+                      alt={artwork.title}
+                      className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </AspectRatio>
                   <div className="absolute inset-0 bg-gradient-hero opacity-0 group-hover:opacity-30 transition-opacity duration-300" />
                   
                   {/* Overlay with info */}
