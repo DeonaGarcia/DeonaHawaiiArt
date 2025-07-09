@@ -47,8 +47,8 @@ const About = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                 <div className="absolute top-8 left-8 right-8 text-white">
                   <h3 className="text-3xl font-bold font-montserrat mb-4">Ocean Inspiration</h3>
-                  <p className="text-xl font-montserrat text-white/90 leading-relaxed max-w-3xl">"My creative practice is inspired by long morning swims of underwater beauty, diverse beaches and 
-coastlines."</p>
+                  <p className="text-xl font-montserrat text-white/90 leading-relaxed max-w-3xl">"My creative practice is inspired by 
+long morning swims of underwater beauty along diverse beaches and  coastlines."</p>
                 </div>
               </div>
             </Card>
@@ -78,10 +78,7 @@ coastlines."</p>
                   <h4 className="text-xl font-semibold font-montserrat text-primary mb-4">
                     Artistic Vision
                   </h4>
-                  <p className="font-montserrat text-muted-foreground leading-relaxed mb-4">
-                    Contemporary multidisciplinary painter competent in all mediums, mixed media and collage, 
-                    focusing on oil paintings that celebrate the islands and ocean.
-                  </p>
+                  <p className="font-montserrat text-muted-foreground leading-relaxed mb-4">Deona is a Contemporary multidisciplinary painter competent in all mediums, mixed media and collage, focusing on oil paintings that celebrate the islands and ocean.</p>
                   <p className="font-montserrat text-muted-foreground leading-relaxed">
                     Each piece begins with moments of wonder experienced firsthand in the natural beauty of Hawaii.
                   </p>
