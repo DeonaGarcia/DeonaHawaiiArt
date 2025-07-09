@@ -47,8 +47,8 @@ const About = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                 <div className="absolute top-8 left-8 right-8 text-white">
                   <h3 className="text-3xl font-bold font-montserrat mb-4">Ocean Inspiration</h3>
-                  <p className="text-xl font-montserrat text-white/90 leading-relaxed max-w-3xl">"My creative practice is inspired by 
-long morning swims of underwater beauty along diverse beaches and  coastlines."</p>
+                  <p className="text-xl font-montserrat text-white/90 leading-relaxed max-w-3xl">"My creative practice is inspired by  long morning swims of
+ underwater beauty along diverse beaches and  coastlines."</p>
                 </div>
               </div>
             </Card>
