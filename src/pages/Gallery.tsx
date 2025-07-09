@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Paintbrush, Palette } from "lucide-react";
 import Navigation from "@/components/Navigation";
 
 const Gallery = () => {
@@ -210,21 +211,12 @@ const Gallery = () => {
                   <div className="relative overflow-hidden">
                     <AspectRatio ratio={16/12} className="w-full">
                       <div className="w-full h-full bg-muted flex items-center justify-center">
-                        <div className="text-center">
-                          <div className="w-16 h-16 mx-auto mb-4 bg-muted-foreground/20 rounded-full flex items-center justify-center">
-                            <svg 
-                              className="w-8 h-8 text-muted-foreground" 
-                              fill="none" 
-                              stroke="currentColor" 
-                              viewBox="0 0 24 24"
-                            >
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                            </svg>
-                          </div>
-                          <p className="text-sm font-montserrat text-muted-foreground">
-                            Coming Soon
-                          </p>
-                        </div>
+                         <div className="text-center">
+                           <div className="w-16 h-16 mx-auto mb-4 bg-muted-foreground/20 rounded-full flex items-center justify-center gap-1">
+                             <Paintbrush className="w-6 h-6 text-muted-foreground" />
+                             <Palette className="w-6 h-6 text-muted-foreground" />
+                           </div>
+                         </div>
                       </div>
                     </AspectRatio>
                   </div>
