@@ -45,7 +45,7 @@ const About = () => {
               <div className="relative aspect-[4/3]">
                 <img src="/lovable-uploads/f22d29c1-055e-4e2f-93e2-c1a245e4190f.png" alt="Ocean inspiration - underwater swimming scene showing the artist's connection to marine life" className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                <div className="absolute bottom-8 left-8 right-8 text-white">
+                <div className="absolute top-8 left-8 right-8 text-white">
                   <h3 className="text-3xl font-bold font-montserrat mb-4">Ocean Inspiration</h3>
                   <p className="text-xl font-montserrat text-white/90 leading-relaxed max-w-3xl">"My creative practice is inspired by long morning swims of underwater beauty, diverse beaches and 
 coastlines."</p>
