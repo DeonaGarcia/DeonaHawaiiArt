@@ -105,7 +105,7 @@ const About = () => {
                       opportunity to attend art school and return to Kona with an education and a love for expressing the beauty of the 
                       islands in vivid color.
                     </p>
-                    <p className="text-muted-foreground font-montserrat leading-relaxed">Deona is a contemporary multidisciplinary painter competent in all mediums; watercolors, acrylic, mixed media and collage, focusing more on oil paintings.</p>
+                    <p className="text-muted-foreground font-montserrat leading-relaxed">Deona is a contemporary multidisciplinary painter competent in all mediums: watercolors, acrylic, mixed media and collage, focusing more on oil paintings.</p>
                   </div>
                   
                   <div>
