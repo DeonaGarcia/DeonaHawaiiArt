@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import heroBannerImage from "@/assets/hero-banner.jpg";
 const HeroBanner = () => {
   return <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background with your artwork */}
