@@ -17,6 +17,20 @@ const About = () => {
             </h1>
           </div>
 
+          {/* Snorkeling Image under About Deona */}
+          <div className="mb-16">
+            <Card className="overflow-hidden shadow-elegant group">
+              <div className="relative aspect-[4/3]">
+                <img src="/lovable-uploads/91277f99-eb12-48a7-ae5d-ac1d24c1e83b.png" alt="Underwater snorkeling scene capturing the beauty of marine life" className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                <div className="absolute top-8 left-8 right-8 text-white">
+                  <h3 className="text-3xl font-bold font-montserrat mb-4 text-white">Underwater Discovery</h3>
+                  <p className="text-xl font-montserrat text-white leading-relaxed max-w-3xl">"Exploring the underwater world that inspires my art."</p>
+                </div>
+              </div>
+            </Card>
+          </div>
+
           {/* Complete Art Statement - Featured at top */}
           <div className="mb-20">
             <Card className="shadow-tropical">
@@ -72,17 +86,18 @@ const About = () => {
                 </div>
               </Card>
               
-              {/* Artistic Process & Vision */}
-              <Card className="shadow-tropical">
-                <CardContent className="p-8">
-                  <h4 className="text-xl font-semibold font-montserrat text-primary mb-4">
-                    Artistic Vision
-                  </h4>
-                  <p className="font-montserrat text-muted-foreground leading-relaxed mb-4">Deona is a Contemporary multidisciplinary painter competent in all mediums: watercolors, mixed media and collage, focusing on oil paintings that celebrate the islands and ocean.</p>
-                  <p className="font-montserrat text-muted-foreground leading-relaxed">
-                    Each piece begins with moments of wonder experienced firsthand in the natural beauty of Hawaii.
-                  </p>
-                </CardContent>
+              {/* Artistic Vision with Face Photo */}
+              <Card className="overflow-hidden shadow-elegant group">
+                <div className="relative aspect-[4/5]">
+                  <img src="/lovable-uploads/95a751d3-8c53-4ca8-8bff-4e6bb3e00c60.png" alt="Portrait of artist Deona in her studio" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <div className="absolute bottom-6 left-6 right-6 text-white">
+                    <h4 className="text-xl font-semibold font-montserrat mb-3">Artistic Vision</h4>
+                    <p className="font-montserrat text-white/90 leading-relaxed">
+                      Passionate about capturing the spirit of Hawaii through vibrant artworks
+                    </p>
+                  </div>
+                </div>
               </Card>
             </div>
           </div>
@@ -107,6 +122,7 @@ const About = () => {
                     <h3 className="text-xl font-semibold font-montserrat text-secondary mb-4">
                       Artistic Vision
                     </h3>
+                    <p className="text-muted-foreground font-montserrat leading-relaxed mb-6">Deona is a Contemporary multidisciplinary painter competent in all mediums: watercolors, mixed media and collage, focusing on oil paintings that celebrate the islands and ocean. Each piece begins with moments of wonder experienced firsthand in the natural beauty of Hawaii.</p>
                     <p className="text-muted-foreground font-montserrat leading-relaxed mb-6">
                       Deona's artwork is a vibrant celebration of the islands and the ocean that surrounds them. 
                       The artist's creative practice is inspired by long morning swims of underwater beauty, diverse beaches and the coastlines.
