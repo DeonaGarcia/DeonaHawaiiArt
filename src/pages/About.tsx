@@ -21,7 +21,7 @@ const About = () => {
           <div className="mb-16">
             <Card className="overflow-hidden shadow-elegant group">
               <div className="relative aspect-[4/3]">
-                <img src="/lovable-uploads/91277f99-eb12-48a7-ae5d-ac1d24c1e83b.png" alt="Underwater snorkeling scene capturing the beauty of marine life" className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" />
+                <img src="/lovable-uploads/95a751d3-8c53-4ca8-8bff-4e6bb3e00c60.png" alt="Underwater snorkeling scene capturing the beauty of marine life" className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                 <div className="absolute top-8 left-8 right-8 text-white">
                   <h3 className="text-3xl font-bold font-montserrat mb-4 text-white">Underwater Discovery</h3>
@@ -89,7 +89,7 @@ const About = () => {
               {/* Artistic Vision with Face Photo */}
               <Card className="overflow-hidden shadow-elegant group">
                 <div className="relative aspect-[4/5]">
-                  <img src="/lovable-uploads/95a751d3-8c53-4ca8-8bff-4e6bb3e00c60.png" alt="Portrait of artist Deona in her studio" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <img src="/lovable-uploads/91277f99-eb12-48a7-ae5d-ac1d24c1e83b.png" alt="Portrait of artist Deona in her studio" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   <div className="absolute bottom-6 left-6 right-6 text-white">
                     <h4 className="text-xl font-semibold font-montserrat mb-3">Artistic Vision</h4>
