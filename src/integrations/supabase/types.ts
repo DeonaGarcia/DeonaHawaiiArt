@@ -24,6 +24,9 @@ export type Database = {
           id: string
           original_bucket: string | null
           original_path: string | null
+          printify_file_id: string | null
+          printify_file_url: string | null
+          printify_uploaded_at: string | null
           slug: string
           tags: string[] | null
           title: string
@@ -39,6 +42,9 @@ export type Database = {
           id?: string
           original_bucket?: string | null
           original_path?: string | null
+          printify_file_id?: string | null
+          printify_file_url?: string | null
+          printify_uploaded_at?: string | null
           slug: string
           tags?: string[] | null
           title: string
@@ -54,6 +60,9 @@ export type Database = {
           id?: string
           original_bucket?: string | null
           original_path?: string | null
+          printify_file_id?: string | null
+          printify_file_url?: string | null
+          printify_uploaded_at?: string | null
           slug?: string
           tags?: string[] | null
           title?: string
