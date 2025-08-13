@@ -8,3 +8,7 @@ verify_jwt = false
 
 [functions.ingest-artworks]
 verify_jwt = false
+
+[functions.seed-artworks-from-public]
+verify_jwt = false
+

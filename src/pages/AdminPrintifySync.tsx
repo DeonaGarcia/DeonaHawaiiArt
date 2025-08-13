@@ -54,11 +54,16 @@ const AdminPrintifySync = () => {
             <Tabs value={activeTab} onValueChange={setActiveTab}>
               <TabsList>
                 <TabsTrigger value="upload">Upload Originals</TabsTrigger>
+                <TabsTrigger value="import">Import from Site Images</TabsTrigger>
                 <TabsTrigger value="send">Send to Printify</TabsTrigger>
               </TabsList>
 
               <TabsContent value="upload">
                 <UploadOriginals onDone={() => setActiveTab("send")} />
+              </TabsContent>
+
+              <TabsContent value="import">
+                <ImportFromSiteImages onDone={() => setActiveTab("send")} />
               </TabsContent>
 
               <TabsContent value="send">
@@ -194,6 +199,88 @@ const SendToPrintify = () => {
           <div className="mt-6">
             <pre className="text-xs bg-muted p-4 rounded-md overflow-auto max-h-96">{JSON.stringify(result, null, 2)}</pre>
           </div>
+        )}
+      </div>
+    </section>
+  );
+};
+
+const ImportFromSiteImages = ({ onDone }: { onDone?: () => void }) => {
+  const { toast } = useToast();
+  const [files, setFiles] = useState<string[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [isImporting, setIsImporting] = useState(false);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const res = await fetch('/lovable-uploads/manifest.json');
+        if (!res.ok) throw new Error(`Manifest not found (${res.status})`);
+        const data = await res.json();
+        setFiles(Array.isArray(data?.files) ? data.files : []);
+      } catch (e: any) {
+        toast({ title: 'Failed to load manifest', description: e.message, variant: 'destructive' });
+      } finally {
+        setLoading(false);
+      }
+    })();
+  }, []);
+
+  const run = async () => {
+    if (!files.length) {
+      toast({ title: 'No files found', description: 'The manifest is empty.' });
+      return;
+    }
+    try {
+      setIsImporting(true);
+      const images = files.map((name) => {
+        const base = name.replace(/\.[^/.]+$/, '');
+        const title = base
+          .replace(/[-_]+/g, ' ')
+          .replace(/\s+/g, ' ')
+          .trim()
+          .replace(/\b\w/g, (c) => c.toUpperCase());
+        const url = `${window.location.origin}/lovable-uploads/${encodeURIComponent(name)}`;
+        return { url, title };
+      });
+
+      const { data, error } = await supabase.functions.invoke('seed-artworks-from-public', {
+        body: { images },
+      });
+      if (error) throw error;
+
+      const created = data?.created?.length || 0;
+      const errors = data?.errors?.length || 0;
+      toast({ title: `Imported ${created} artworks`, description: errors ? `${errors} failed` : 'All good!' });
+      onDone?.();
+    } catch (e: any) {
+      toast({ title: 'Import failed', description: e.message, variant: 'destructive' });
+    } finally {
+      setIsImporting(false);
+    }
+  };
+
+  return (
+    <section className="mt-6">
+      <div className="rounded-xl border border-border p-6 bg-card">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <div>
+            <h2 className="text-xl font-semibold font-montserrat text-primary">Import from Site Images</h2>
+            <p className="text-sm text-muted-foreground">Creates artwork entries for images already in your site.</p>
+          </div>
+          <div className="flex items-center gap-3">
+            <span className="text-sm text-muted-foreground">{loading ? 'Loading...' : `${files.length} files detected`}</span>
+            <Button onClick={run} disabled={loading || isImporting || files.length === 0}>
+              {isImporting ? 'Importing...' : 'Import All'}
+            </Button>
+          </div>
+        </div>
+        {!loading && files.length > 0 && (
+          <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 text-xs text-muted-foreground">
+            {files.slice(0, 12).map((n) => (
+              <li key={n} className="truncate" title={n}>{n}</li>
+            ))}
+          </ul>
         )}
       </div>
     </section>
