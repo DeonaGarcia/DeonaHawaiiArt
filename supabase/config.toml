@@ -1,8 +1,10 @@
-
 project_id = "cuvnfzzsgxstemnztvel"
 
 [functions.list-shops]
 verify_jwt = false
 
 [functions.upload-artworks-to-printify]
+verify_jwt = false
+
+[functions.ingest-artworks]
 verify_jwt = false

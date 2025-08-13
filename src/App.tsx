@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Gallery from "./pages/Gallery";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
+import AdminPrintifySync from "./pages/AdminPrintifySync";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +21,10 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/about" element={<About />} />
+          <Route path="/admin/printify-sync" element={
+            // Simple guard: page is not linked in nav, but accessible via URL
+            <AdminPrintifySync />
+          } />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
