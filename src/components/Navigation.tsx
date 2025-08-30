@@ -10,7 +10,6 @@ const Navigation = () => {
     { name: "Home", path: "/" },
     { name: "Gallery", path: "/gallery" },
     { name: "About", path: "/about" },
-    { name: "Admin", path: "/admin/printify-sync" },
   ];
 
   const isActive = (path: string) => {
