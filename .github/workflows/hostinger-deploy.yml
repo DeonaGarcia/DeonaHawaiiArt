@@ -23,6 +23,12 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Copy PHP files to dist
+        run: |
+          cp index.php dist/
+          cp composer.json dist/
+          cp composer.lock dist/
+
       - name: Deploy to Hostinger via FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -30,9 +36,11 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
-          local-dir: dist
+          local-dir: dist/
           server-dir: ${{ secrets.FTP_TARGET_DIR }}
           dangerous-clean-slate: false
           exclude: |
             **/.git*
             **/.github*
+            **/node_modules*
+            **/.env*
