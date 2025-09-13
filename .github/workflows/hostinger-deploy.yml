@@ -23,11 +23,21 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Copy PHP files to dist
+      - name: Copy PHP files and .htaccess to dist
         run: |
           cp index.php dist/
           cp composer.json dist/
           cp composer.lock dist/
+          cp public/.htaccess dist/
+
+      - name: Verify build output
+        run: |
+          echo "Build directory contents:"
+          ls -la dist/
+          echo "Checking for required files:"
+          test -f dist/index.html && echo "✓ index.html found" || echo "✗ index.html missing"
+          test -f dist/index.php && echo "✓ index.php found" || echo "✗ index.php missing"
+          test -f dist/.htaccess && echo "✓ .htaccess found" || echo "✗ .htaccess missing"
 
       - name: Deploy to Hostinger via FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
