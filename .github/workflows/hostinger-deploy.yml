@@ -1,35 +1,28 @@
 name: Hostinger Deploy
-
 on:
   push:
     branches: [ "main" ]
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
-
       - name: Install dependencies
         run: npm ci
-
       - name: Build
         run: npm run build
-
       - name: Copy PHP files and .htaccess to dist
         run: |
           cp index.php dist/
           cp composer.json dist/
           cp composer.lock dist/
           cp public/.htaccess dist/
-
       - name: Verify build output
         run: |
           echo "Build directory contents:"
@@ -38,19 +31,14 @@ jobs:
           test -f dist/index.html && echo "✓ index.html found" || echo "✗ index.html missing"
           test -f dist/index.php && echo "✓ index.php found" || echo "✗ index.php missing"
           test -f dist/.htaccess && echo "✓ .htaccess found" || echo "✗ .htaccess missing"
-
-      - name: Deploy to Hostinger via FTPS
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Deploy to Hostinger via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
         with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          local-dir: dist/
-          server-dir: ${{ secrets.FTP_TARGET_DIR }}
-          dangerous-clean-slate: false
-          exclude: |
-            **/.git*
-            **/.github*
-            **/node_modules*
-            **/.env*
+          username: ${{ secrets.SFTP_USERNAME }}
+          server: ${{ secrets.SFTP_HOST }}
+          port: ${{ secrets.SFTP_PORT }}
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          local_path: './dist/*'
+          remote_path: ${{ secrets.SFTP_TARGET_DIR }}
+          sftp_only: true
+          sftpArgs: '-o ConnectTimeout=5'
