@@ -31,9 +31,9 @@ jobs:
           test -f dist/index.html && echo "✓ index.html found" || echo "✗ index.html missing"
           test -f dist/index.php && echo "✓ index.php found" || echo "✗ index.php missing"
           test -f dist/.htaccess && echo "✓ .htaccess found" || echo "✗ .htaccess missing"
-     - name: Deploy to Hostinger via SFTP
-       uses: wlixcc/SFTP-Deploy-Action@v1.2.6
-       with:
+      - name: Deploy to Hostinger via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
+        with:
          username: ${{ secrets.SFTP_USERNAME }}
          server: ${{ secrets.SFTP_HOST }}
          port: ${{ secrets.SFTP_PORT }}
