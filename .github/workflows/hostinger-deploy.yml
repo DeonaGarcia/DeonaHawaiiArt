@@ -23,22 +23,45 @@ jobs:
           cp composer.json dist/
           cp composer.lock dist/
           cp public/.htaccess dist/
+          # Ensure .htaccess is copied correctly
+          ls -la dist/.htaccess
       - name: Verify build output
         run: |
-          echo "Build directory contents:"
+          echo "Build directory contents (including hidden files):"
           ls -la dist/
           echo "Checking for required files:"
           test -f dist/index.html && echo "✓ index.html found" || echo "✗ index.html missing"
           test -f dist/index.php && echo "✓ index.php found" || echo "✗ index.php missing"
           test -f dist/.htaccess && echo "✓ .htaccess found" || echo "✗ .htaccess missing"
+          echo "Contents of .htaccess file:"
+          cat dist/.htaccess || echo "Could not read .htaccess"
       - name: Deploy to Hostinger via SFTP
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-         username: ${{ secrets.SFTP_USERNAME }}
-         server: ${{ secrets.SFTP_HOST }}
-         port: ${{ secrets.SFTP_PORT }}
-         password: ${{ secrets.SFTP_PASSWORD }}
-         local_path: './dist/*'
-         remote_path: ${{ secrets.SFTP_TARGET_DIR }}
-         sftp_only: true
-         sftpArgs: '-o ConnectTimeout=5'
+          server: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USERNAME }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          port: ${{ secrets.SFTP_PORT }}
+          protocol: sftp
+          local-dir: ./dist/
+          server-dir: ${{ secrets.SFTP_TARGET_DIR }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+          dangerous-clean-slate: false
+          dry-run: false
+      - name: Verify deployment
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USERNAME }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          port: ${{ secrets.SFTP_PORT }}
+          script: |
+            echo "Checking deployed files in ${{ secrets.SFTP_TARGET_DIR }}:"
+            ls -la ${{ secrets.SFTP_TARGET_DIR }}
+            echo "Verifying .htaccess file:"
+            test -f ${{ secrets.SFTP_TARGET_DIR }}/.htaccess && echo "✓ .htaccess deployed successfully" || echo "✗ .htaccess missing on server"
+            echo "Contents of .htaccess on server:"
+            cat ${{ secrets.SFTP_TARGET_DIR }}/.htaccess || echo "Could not read .htaccess from server"
