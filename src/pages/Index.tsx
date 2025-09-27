@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import HeroBanner from "@/components/HeroBanner";
 import FeaturedArt from "@/components/FeaturedArt";
+import WeatherSection from "@/components/WeatherSection";
 import ContactSection from "@/components/ContactSection";
 
 const Index = () => {
@@ -9,6 +10,7 @@ const Index = () => {
       <Navigation />
       <HeroBanner />
       <FeaturedArt />
+      <WeatherSection />
       <ContactSection />
       
       {/* Footer */}
