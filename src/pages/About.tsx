@@ -68,10 +68,9 @@ const About = () => {
             </Card>
           </div>
 
-          {/* Visual Collage Section - Remaining Photos */}
+          {/* Visual Collage Section - Studio Photo Only */}
           <div className="mb-20">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-              
+            <div className="max-w-3xl mx-auto">
               {/* Artist in Studio */}
               <Card className="overflow-hidden shadow-elegant group">
                 <div className="relative aspect-[4/5]">
@@ -81,20 +80,6 @@ const About = () => {
                     <h4 className="text-xl font-semibold font-montserrat mb-3">In the Studio</h4>
                     <p className="font-montserrat text-white/90 leading-relaxed">
                       Creating vibrant island-inspired artwork with passion and dedication
-                    </p>
-                  </div>
-                </div>
-              </Card>
-              
-              {/* Artistic Vision with Face Photo */}
-              <Card className="overflow-hidden shadow-elegant group">
-                <div className="relative aspect-[4/5]">
-                  <img src="/lovable-uploads/b9cd5cf6-3b52-48eb-9fdd-e9d0832fd211.png" alt="Portrait of artist Deona in her studio" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  <div className="absolute bottom-6 left-6 right-6 text-white">
-                    <h4 className="text-xl font-semibold font-montserrat mb-3">Artistic Vision</h4>
-                    <p className="font-montserrat text-white/90 leading-relaxed">
-                      Passionate about capturing the spirit of Hawaii through vibrant artworks
                     </p>
                   </div>
                 </div>
@@ -120,9 +105,8 @@ const About = () => {
                   
                   <div>
                     <h3 className="text-xl font-semibold font-montserrat text-secondary mb-4">
-                      Artistic Vision
+                      Creative Journey
                     </h3>
-                    <p className="text-muted-foreground font-montserrat leading-relaxed mb-6">Deona is a Contemporary multidisciplinary painter competent in all mediums: watercolors, mixed media and collage, focusing on oil paintings that celebrate the islands and ocean. Each piece begins with moments of wonder experienced firsthand in the natural beauty of Hawaii.</p>
                     <p className="text-muted-foreground font-montserrat leading-relaxed mb-6">
                       Deona's artwork is a vibrant celebration of the islands and the ocean that surrounds them. 
                       The artist's creative practice is inspired by long morning swims of underwater beauty, diverse beaches and the coastlines.
@@ -132,6 +116,19 @@ const About = () => {
                       to art lovers across the country.
                     </p>
                   </div>
+                </div>
+                
+                {/* Artistic Vision Statement - Moved under My Journey */}
+                <div className="mt-12 pt-8 border-t border-border">
+                  <h3 className="text-xl font-semibold font-montserrat text-secondary mb-4 text-center">
+                    Artistic Vision
+                  </h3>
+                  <p className="text-muted-foreground font-montserrat leading-relaxed mb-6">
+                    Deona is a Contemporary multidisciplinary painter competent in all mediums: watercolors, mixed media and collage, focusing on oil paintings that celebrate the islands and ocean. Each piece begins with moments of wonder experienced firsthand in the natural beauty of Hawaii.
+                  </p>
+                  <p className="text-muted-foreground font-montserrat leading-relaxed">
+                    Passionate about capturing the spirit of Hawaii through vibrant artworks that invite viewers to discover, appreciate, and celebrate this unique place through an artistic lens.
+                  </p>
                 </div>
               </CardContent>
             </Card>
