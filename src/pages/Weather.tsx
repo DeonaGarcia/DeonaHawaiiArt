@@ -3,32 +3,24 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Weather = () => {
   return (
-    <div className="min-h-screen bg-gradient-hero relative overflow-hidden">
-      {/* Wave Background */}
-      <div className="absolute inset-0 opacity-10">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="absolute top-0 w-full h-full">
-          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="currentColor"></path>
-        </svg>
-      </div>
-      
-      <div className="relative z-10">
+    <div className="min-h-screen bg-background">
       <Navigation />
       
       <main className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold font-montserrat text-primary-foreground mb-6">
-              Surf and Weather App
+            <h1 className="text-4xl md:text-6xl font-bold font-montserrat text-primary mb-6">
+              Hawaii Weather & Surf App
             </h1>
-            <p className="text-xl text-primary-foreground/90 font-montserrat max-w-3xl mx-auto">
-              Your comprehensive surf and weather forecasting tool for the Hawaiian islands. 
+            <p className="text-xl text-muted-foreground font-montserrat max-w-3xl mx-auto">
+              Your comprehensive weather and surf forecasting tool for the Hawaiian islands. 
               Real-time conditions, detailed forecasts, and surf reports all in one place.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
             {/* Current Conditions */}
-            <Card className="shadow-elegant bg-background/95 backdrop-blur-sm">
+            <Card className="shadow-elegant">
               <CardHeader>
                 <CardTitle className="font-montserrat text-primary">Current Conditions</CardTitle>
               </CardHeader>
@@ -57,7 +49,7 @@ const Weather = () => {
             </Card>
 
             {/* Wind Conditions */}
-            <Card className="shadow-elegant bg-background/95 backdrop-blur-sm">
+            <Card className="shadow-elegant">
               <CardHeader>
                 <CardTitle className="font-montserrat text-primary">Wind & Air</CardTitle>
               </CardHeader>
@@ -86,7 +78,7 @@ const Weather = () => {
             </Card>
 
             {/* Surf Conditions */}
-            <Card className="shadow-elegant bg-background/95 backdrop-blur-sm">
+            <Card className="shadow-elegant">
               <CardHeader>
                 <CardTitle className="font-montserrat text-primary">Surf Report</CardTitle>
               </CardHeader>
@@ -116,7 +108,7 @@ const Weather = () => {
           </div>
 
           {/* Forecast Section */}
-          <Card className="shadow-elegant bg-background/95 backdrop-blur-sm mb-12">
+          <Card className="shadow-elegant mb-12">
             <CardHeader>
               <CardTitle className="font-montserrat text-primary text-2xl">7-Day Forecast</CardTitle>
             </CardHeader>
@@ -148,13 +140,13 @@ const Weather = () => {
           </Card>
 
           {/* Coming Soon Notice */}
-          <Card className="shadow-elegant bg-primary-foreground/95 backdrop-blur-sm text-center">
+          <Card className="shadow-elegant bg-gradient-hero text-center">
             <CardContent className="p-8">
-              <h3 className="text-2xl font-bold font-montserrat text-primary mb-4">
-                Full Surf App Coming Soon
+              <h3 className="text-2xl font-bold font-montserrat text-primary-foreground mb-4">
+                Full Weather App Coming Soon
               </h3>
-              <p className="text-primary/80 font-montserrat max-w-2xl mx-auto">
-                This is a preview of the comprehensive surf and weather forecasting application. 
+              <p className="text-primary-foreground/90 font-montserrat max-w-2xl mx-auto">
+                This is a preview of the comprehensive weather and surf forecasting application. 
                 The full version will include real-time data integration, interactive maps, 
                 detailed marine forecasts, and much more.
               </p>
@@ -162,7 +154,6 @@ const Weather = () => {
           </Card>
         </div>
       </main>
-      </div>
       
       {/* Footer */}
       <footer className="bg-primary text-primary-foreground py-12">
