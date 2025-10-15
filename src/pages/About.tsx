@@ -100,7 +100,7 @@ const About = () => {
                       Island Roots & Growth
                     </h3>
                     <p className="text-muted-foreground font-montserrat leading-relaxed mb-6">Deona Garcia is an artist residing on the Big Island of Hawaii. Coming to the islands as a creative teen, she raised a family on Kauai before relocating to the Big Island. Leaving the islands for a season gave Deona the opportunity to attend art school and return to Kona with an education and a love for expressing the beauty of the islands in vivid color.</p>
-                    <p className="text-muted-foreground font-montserrat leading-relaxed">Deona is a contemporary multidisciplinary painter competent in all mediums: watercolors, acrylic, mixed media and collage, focusing more on oil paintings.</p>
+                    
                   </div>
                   
                   <div>
